@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="js/hammer.js"></script>
+</head>
+<body class="mobil-mods">
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div class="pop-up__wrapper">
+        <div class="clone" id="clone-nav"></div>
+        <button type="button" class="btn-close"></button>
+        <div class="pop-up__nav">
+            <div id="nav-bar">
+                <button type="button"><img alt="arrows" src="img/arrow_L.svg"></button>
+                <button type="button"><img alt="arrows" src="img/arrow_R.svg"></button>
+            </div>
+            <div id="status-bar">
+                <span>0</span> / <span>0</span>
+            </div>
+        </div>
+        <div id="pop-up__content"></div>
+    </div>
+    <div id="pop-up__call-back">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<button id="toggler-mobil">
+    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+    Переключить обратно на мобильный вид
+</button>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="newspaper" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__mobil">
+                <div class="content__mobil__pages">
+                    <div id="mobil-pages__nav" class="content__mobil__pages__nav">
+                        <a href="content_14.html">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <h2>Глава 15</h2>
+                        <a href="content_16.html">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <h1>Верховный главнокомандующий</h1>
+                </div>
+                <label id="mobil-watch-v2">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <input id="collapse-watch" type="checkbox">
+                    <div>
+                        <label>
+                            <input type="radio" name="watch" value="mobil">
+                            Мобильный вид
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="book">
+                            Электроная книга
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="paper">
+                            Газета
+                        </label>
+                    </div>
+                </label>
+                <div id="mobil-cards__nav" class="content__mobil__cards">
+                    <button>
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3 id="mobil-cards__status"><span>0</span> / <span>0</span></h3>
+                    <button>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobil__watch-area" class="content__mobil__watch-area">
+
+                </div>
+            </div>
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label class="active">
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
+                    <label class="content__header__nav-bar__search">
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <a href="content_14.html" class="next-one">
+                            <span>14</span>
+                            <img alt="arrow" src="img/arrow_L.svg" >
+                        </a>
+                        <a href="content_16.html" class="next-one">
+                            <img alt="arrow" src="img/arrow_R.svg" >
+                            <span>16</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="content__body__pages active">
+                    <div class="content__body__pages__header">
+                        <h1>ВЕРХОВНЫЙ ГЛАВНОКОМАНДУЮЩИЙ</h1>
+                    </div>
+                    <div class="content__body__pages__wrapper wrapper-t1">
+                        <div class="content__body__pages__line-first">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/verhovniy/verx_1@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card mini-card cs-mt-one">
+                                <h2>ЦИФРЫ И ДОСТИЖЕНИЯ</h2>
+                            </div>
+                            <div class="content__body__pages__card__mini-wrap">
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        в <b>1916</b> году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        главное артиллерийское управление
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        ввело в строй
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        <b>15</b> новых заводов
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f8">
+                                        производство винтовок возросло
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f8">
+                                        в 3 раза, орудий в 8 раз,
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f8">
+                                        количество боеприпасов в 5 раз
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1-fill">
+                                    <p class="sf-b sf-ttu sf-f9">
+                                        до весны 1917 года
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f11">
+                                        в войска поступило
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        11 446
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        огнеметов
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-f10">
+                                        в 1914-1917 годах
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        произведено
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        5565
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        самолетов
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f11">
+                                        к <b>1917</b> году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        производилось
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        9 000 000
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        снарядов в год
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1-fill">
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        к <b>1916</b> году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f9">
+                                        поступило на снабжение
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        20 000
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        автомобилей
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        разного назначения
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        1700
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        мотоциклов
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        900
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        прожекторных станций
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        8800
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        самокатов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-second">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/verhovniy/verx_2@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/verhovniy/verx_5@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-2 fs-8">
+                                <h2>ГЕОРГИЕВСКИЕ КАВАЛЕРЫ</h2>
+                                <p>
+                                    Император Николай II в 1913 году утвердил новый статут военного ордена Святого
+                                    Великомученика и Победоносца Георгия (самого ордена, Георгиевского креста, Георгиевской медали, Георгиевского оружия).
+                                    В 1917 году количество Георгиевских кавалеров
+                                    (награжденных Георгиевскими крестами) составило более 1 млн солдат и матросов,
+                                    полных Георгиевских кавалеров — около 30 тысяч. Георгиевскими медалями были награждены около 1,5 млн человек.
+                                    Георгиевские награды давали фронтовикам почетный
+                                    статус в обществе, существенную прибавку к жалованию или пенсию при получении
+                                    инвалидности. Сам Николай II был награжден орденом Святого Георгия 4-й степени
+                                    в 1915 году — единственная российская награда Государя после коронации (всего имел
+                                    5 российских и 39 иностранных орденов).
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/verhovniy/verx_3@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-3 fs-4">
+                                <p>
+                                    С целью бесперебойного обеспечения воинских
+                                    перевозок в течение 1916-го и начала 1917 года было сооружено
+                                    3150 верст вторых путей, развито
+                                    10 узловых станций. В целом по стране удалось
+                                    увеличить число вагонопробегов на 1500 вагонов в день.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-third">
+                            <div class="content__body__pages__card cs-12 fs-8">
+                                <h2>ИМПЕРАТОР НИКОЛАЙ II</h2>
+                                <p>
+                                    ПРИНЯЛ НА СЕБЯ ВЕРХОВНОЕ ГЛАВНОКОМАНДОВАНИЕ ВООРУЖЕННЫМИ СИЛАМИ РОССИИ В АВГУСТЕ 1915 ГОДА — В ТЯЖЕЛЕЙШИЙ
+                                    ПЕРИОД ПЕРВОЙ МИРОВОЙ ВОЙНЫ. ЦАРСТВО ПОЛЬСКОЕ БЫЛО
+                                    ОТДАНО ПРОТИВНИКУ, С ПАДЕНИЕМ БРЕСТ-ЛИТОВСКА НАЧАЛОСЬ
+                                    ОТСТУПЛЕНИЕ ИЗ ЛИТВЫ, ПАЛИ КОВЕЛЬ, ВЛАДИМИР ВОЛЫНСКИЙ,
+                                    ГРОДНО. ОБОРОНИТЕЛЬНАЯ ЛИНИЯ НЕМАН — БУГ РАЗВАЛИЛАСЬ. РУССКАЯ АРМИЯ ПОНЕСЛА ТЯЖЕЛЫЕ ПОТЕРИ. НИКОЛАЙ II ПРЕДПРИНЯЛ
+                                    ЖЕСТКИЕ МЕРЫ ПО ВОССТАНОВЛЕНИЮ УПРАВЛЕНИЯ ВОЙСКАМИ.
+                                    ПОД ЕГО НЕПОСРЕДСТВЕННЫМ РУКОВОДСТВОМ БЫЛА ПРОВЕДЕНА
+                                    РЕОРГАНИЗАЦИЯ ФРОНТОВ, НАЛАЖЕНО БЕСПЕРЕБОЙНОЕ СНАБЖЕНИЕ ДЕЙСТВУЮЩЕЙ АРМИИ ВООРУЖЕНИЕМ И БОЕПРИПАСАМИ,
+                                    ПРОВЕДЕН РЯД УСПЕШНЫХ СТРАТЕГИЧЕСКИХ ОПЕРАЦИЙ.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-3 fs-4">
+                                <h2>МОБИЛИЗАЦИОННЫЕ РЕСУРСЫ</h2>
+                                <p>
+                                    Император Николай II
+                                    обеспечил мобилизацию
+                                    военной промышленности
+                                    России, которая в 1914–
+                                    1917 годах произвела
+                                    3,3 млн винтовок, 28 тысяч
+                                    пулеметов, 11,7 тыс. орудий, 4,6 тыс. минометов,
+                                    11 446 огнеметов, 27 млн
+                                    снарядов,13,5 млрд патронов, впервые освоила
+                                    массовый выпуск самолетов, легких (ручных) пулеметов, ручных гранат,
+                                    зенитных орудий и др.
+                                    В России было мобилизовано 16 млн человек, что
+                                    составляло 8,7% ее населения (Франция — 17%,
+                                    Великобритания — 10,7%,
+                                    Германия — 20,7%, Австро-Венгрия — 17,1%).
+                                    К концу войны Русская
+                                    армия составляла около
+                                    10 млн человек, в том числе 247,4 тыс. офицеров.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-4">
+                                <h2>УПРАВЛЕНИЕ И СТРАТЕГИЯ</h2>
+                                <p>
+                                    Под руководством Императора Николая II были реорганизованы Ставка Верховного Главнокомандующего, управление фронтами, развернуты 13 новых армий.
+                                    Большая площадь Северо-Западного фронта разделилась на 2 самостоятельных
+                                    фронта — Северный и Западный. Осенью 1915 года Государь создал новый
+                                    стратегический фронт обороны. Успешное проведение Вильно-Молодеченской,
+                                    Сарыкамышской, Карпатской, Эрзурумской крупных наступательных операций
+                                    изменило стратегическую обстановку на фронтах. Завершение Хамандской
+                                    операции положило конец германскому влиянию в Персии, предотвратило ее
+                                    вступление в войну на стороне Германии. Впервые в боевой практике Русская
+                                    армия на Юго-Западном фронте осуществила прорыв глубокоэшелонированной позиционной обороны противника (Брусиловский прорыв). Впервые для
+                                    достижения оперативной внезапности был осуществлен переход в наступление
+                                    без артиллерийской подготовки (Митавская операция). Впервые были созданы
+                                    фронтовые и армейские базы снабжения.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-8 fs-4">
+                                <h2>НЕОБХОДИМАЯ ЗАЩИТА</h2>
+                                <p>
+                                    После нарушения германскими войсками Женевской конвенции и применения ими
+                                    химического оружия перед Русской армией встала угроза химической войны. В России
+                                    за 1916 год было запущено 33 завода по производству серной кислоты. В период с конца
+                                    1915-го по начало 1917 года в России появилось 25 бензольных заводов.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/verhovniy/verx_4@3x.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+                <div id="calendar">
+                    <div class="content__header__page-bar">
+                        <div class="content__header__page-bar__frame"></div>
+                        <div class="content__header__page-bar__wrapper">
+                            <h1>Август</h1>
+                        </div>
+                    </div>
+                    <img src="img/calendar-no-hd.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/history_card.js"></script>
+</body>
+</html>

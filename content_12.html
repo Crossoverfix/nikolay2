@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="js/hammer.js"></script>
+</head>
+<body class="mobil-mods">
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div class="pop-up__wrapper">
+        <div class="clone" id="clone-nav"></div>
+        <button type="button" class="btn-close"></button>
+        <div class="pop-up__nav">
+            <div id="nav-bar">
+                <button type="button"><img alt="arrows" src="img/arrow_L.svg"></button>
+                <button type="button"><img alt="arrows" src="img/arrow_R.svg"></button>
+            </div>
+            <div id="status-bar">
+                <span>0</span> / <span>0</span>
+            </div>
+        </div>
+        <div id="pop-up__content"></div>
+    </div>
+    <div id="pop-up__call-back">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<button id="toggler-mobil">
+    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+    Переключить обратно на мобильный вид
+</button>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="newspaper" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__mobil">
+                <div class="content__mobil__pages">
+                    <div id="mobil-pages__nav" class="content__mobil__pages__nav">
+                        <a href="content_11.html">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <h2>Глава 12</h2>
+                        <a href="content_13.html">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <h1>Водные и сухопутные пути сообщения</h1>
+                </div>
+                <label id="mobil-watch-v2">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <input id="collapse-watch" type="checkbox">
+                    <div>
+                        <label>
+                            <input type="radio" name="watch" value="mobil">
+                            Мобильный вид
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="book">
+                            Электроная книга
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="paper">
+                            Газета
+                        </label>
+                    </div>
+                </label>
+                <div id="mobil-cards__nav" class="content__mobil__cards">
+                    <button>
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3 id="mobil-cards__status"><span>0</span> / <span>0</span></h3>
+                    <button>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobil__watch-area" class="content__mobil__watch-area">
+
+                </div>
+            </div>
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label class="active">
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
+                    <label class="content__header__nav-bar__search">
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <a href="content_11.html" class="next-one">
+                            <span>11</span>
+                            <img alt="arrow" src="img/arrow_L.svg" >
+                        </a>
+                        <a href="content_13.html" class="next-one">
+                            <img alt="arrow" src="img/arrow_R.svg" >
+                            <span>13</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="content__body__pages active">
+                    <div class="content__body__pages__header">
+                        <h1>ВОДНЫЕ И СУХОПУТНЫЕ ПУТИ СООБЩЕНИЯ</h1>
+                    </div>
+                    <div class="content__body__pages__wrapper wrapper-t1">
+                        <div class="content__body__pages__line-first">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/puti_soobsheniya/vod_1@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card mini-card cs-mt-one">
+                                <h2>ЦИФРЫ И ДОСТИЖЕНИЯ</h2>
+                            </div>
+                            <div class="content__body__pages__card__mini-wrap">
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-ttu sf-f32">
+                                        I<span class="sf-f13"><b>МЕСТО</b><br>в мире</span>
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        речной
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        флот
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1913 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f8">
+                                        5556 паровых судов
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f8">
+                                        24 151 непаровых судов
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1-fill">
+                                    <p class="sf-ttu sf-f32">
+                                        I<span class="sf-f13"><b>МЕСТО</b><br>в мире</span>
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        наливной
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        флот
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1912 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        <b>15</b> танкеров
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        морской
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        торговый
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        флот
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1914 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f11">
+                                        <b>1103</b> парохода
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        2597 <span class="sf-f11">непаровых судов</span>
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        дорожная
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        сеть
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        России
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1914 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        774 704<span class="sf-f8 sf-va">км</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-second">
+                            <div class="content__body__pages__card cs-6 fs-8">
+                                <h2>ИМПЕРАТОР НИКОЛАЙ II</h2>
+                                <p>
+                                    ПРИДАВАЛ БОЛЬШОЕ ЗНАЧЕНИЕ РАЗВИТИЮ ВОДНЫХ И СУХОПУТНЫХ ПУТЕЙ СООБЩЕНИЯ, ПОДДЕРЖКЕ СУДОСТРОИТЕЛЬНОЙ ОТРАСЛИ. БУДУЧИ ВАЖНЕЙШЕЙ ЧАСТЬЮ ТРАНСПОРТНОЙ
+                                    ИНФРАСТРУКТУРЫ, ОНИ СЫГРАЛИ ОГРОМНУЮ РОЛЬ В ЭКОНОМИЧЕСКОМ РАЗВИТИИ СТРАНЫ, ВО ВНУТРЕННЕЙ И ВНЕШНЕЙ
+                                    ТОРГОВЛЕ, ОСВОЕНИИ ДАЛЬНЕВОСТОЧНЫХ И СЕВЕРНЫХ ТЕРРИТОРИЙ РОССИЙСКОЙ ИМПЕРИИ, УКРЕПЛЕНИИ ОБОРОНОСПОСОБНОСТИ ГОСУДАРСТВА.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-3 fs-4">
+                                <h2>ТЫСЯЧИ ВЕРСТ ШОССЕ</h2>
+                                <p>
+                                    Император Николай II
+                                    уделял особое внимание
+                                    строительству шоссейных дорог.
+                                    В начале его царствования
+                                    было 23 000 км шоссейных дорог
+                                    (без Финляндии),
+                                    в 1913 году — 35 939 км
+                                    (рост на 60%).
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/puti_soobsheniya/vod_5@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-4">
+                                <h2>МИЛЛИАРДЫ ПУДОВ ПО ВОДЕ</h2>
+                                <p>
+                                    Общая длина рек, озер и каналов России (без учета Финляндии) в 1913 году составляла
+                                    387 081 км, из них сплавных и судоходных — 289 647 км. Ежегодные затраты на улучшение
+                                    водных путей в 1906–1913 годах выросли в два раза. Император Николай II
+                                    лично инициировал проведение работ по шлюзованию рек Оки, Шексны, Северного
+                                    Донца, Дона. Объем перевозок по внутренним водным путям в 1894–1911 годах вырос
+                                    в 3 раза. Только в 1909 году он составил 3,4 млрд пудов. К 1913 году доля речного
+                                    транспорта в грузообороте страны составила 22,9%, объем пассажирских перевозок — 16,1%.
+                                    Среди грузов преобладали лес (50%), хлеб и нефть. За 1902–1912 годы
+                                    в России было построено 58 178 речных судов, из них 1460 — паровых.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-14 fs-4">
+                                <h2>МОРСКИЕ ВОРОТА РОССИИ</h2>
+                                <p>
+                                    Император Николай II в 1902 году подписал Указ о создании Главного
+                                    управления торгового мореплавания и портов. К 1914 году Россия
+                                    имела 26 крупнейших портов в Белом, Балтийском, Черном, Азовском, Каспийском морях, на Тихом океане. Их общий грузооборот
+                                    по сравнению с 1905 годом увеличился в 4,5 раза. В 1913 году (включая
+                                    погрузку и разгрузку) он составлял 44,4 млн тонн различных грузов,
+                                    из них 15,7 млн. т приходилось на экспортные грузы, 5,5 млн. т —
+                                    на импортные. В 1903–1907 годах число судов по приходу-отходу
+                                    в порты России составило 26 663, а в 1913 году — 43 368. В начале
+                                    XX века 52% ввоза и 70% вывоза товаров осуществлялось Россией
+                                    морским путем.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/puti_soobsheniya/vod_3@3x.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-third">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/puti_soobsheniya/vod_2@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-17 fs-8">
+                                <h2>ПЕРВЫЙ В МИРЕ ТЕПЛОХОД</h2>
+                                <p>
+                                    Император Николай II актив но
+                                    претворял в жизнь стратегию развития морского транс порта. Если
+                                    в 1896 году в России было 522 парохода, то в 1913 году — 1103 парохода. Только за 1905–1914 гг. число
+                                    пароходов увеличилось на 32,1%,
+                                    их вместимость — на 41%, грузоподъемность — на 53,3%.
+                                    В 1903 году в России был построен первый в мире теплоход «Вандал», в 1908 году — первый в мире
+                                    морской наливной теплоход-танкер
+                                    «Дело».
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/puti_soobsheniya/vod_4@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-12 fs-4">
+                                <h2>НАЧАЛО СЕВЕРНЫХ НАВИГАЦИЙ</h2>
+                                <p>
+                                    В годы царствования Николая II произошло масштабное освоение
+                                    северных и дальневосточных водных путей сообщения. С 1906 года начали осуществляться ежегодные рейсы из Владивостока в устье реки Колыма
+                                    в Восточно-Сибирском море. В Белом море и Северном Ледовитом океане
+                                    поддерживались Мурманская, Варангерская, Онежская, Кандалакшская,
+                                    Мезенская, Печорская, Новоземельская линии (2–5 рейсов в навигацию).
+                                    К 1913 году суда Добровольного флота обслуживали экспрессную линию
+                                    в Японию, Китай и Корею, а также дальние каботажные линии в портовые
+                                    пункты Охотского моря и Камчатки.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-7 fs-4">
+                                <h2>УЧИЛИЩА ДЛЯ МОРЯКОВ</h2>
+                                <p>
+                                    Император Николай II
+                                    большое внимание уделял
+                                    подготовке кадров
+                                    для морского транспорта.
+                                    К 1914 году было открыто
+                                    37 учебных заведений, в том числе
+                                    10 училищ дальнего плавания
+                                    на всех бассейнах
+                                    и 3 училища малого каботажа.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+                <div id="calendar">
+                    <div class="content__header__page-bar">
+                        <div class="content__header__page-bar__frame"></div>
+                        <div class="content__header__page-bar__wrapper">
+                            <h1>Август</h1>
+                        </div>
+                    </div>
+                    <img src="img/calendar-no-hd.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/history_card.js"></script>
+</body>
+</html>

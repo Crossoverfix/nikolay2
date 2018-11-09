@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="js/hammer.js"></script>
+</head>
+<body class="mobil-mods">
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div class="pop-up__wrapper">
+        <div class="clone" id="clone-nav"></div>
+        <button type="button" class="btn-close"></button>
+        <div class="pop-up__nav">
+            <div id="nav-bar">
+                <button type="button"><img alt="arrows" src="img/arrow_L.svg"></button>
+                <button type="button"><img alt="arrows" src="img/arrow_R.svg"></button>
+            </div>
+            <div id="status-bar">
+                <span>0</span> / <span>0</span>
+            </div>
+        </div>
+        <div id="pop-up__content"></div>
+    </div>
+    <div id="pop-up__call-back">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<button id="toggler-mobil">
+    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+    Переключить обратно на мобильный вид
+</button>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="newspaper" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__mobil">
+                <div class="content__mobil__pages">
+                    <div id="mobil-pages__nav" class="content__mobil__pages__nav">
+                        <a href="content_22.html">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <h2>Глава 23</h2>
+                        <a href="content_24.html">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <h1>Царская семья</h1>
+                </div>
+                <label id="mobil-watch-v2">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <input id="collapse-watch" type="checkbox">
+                    <div>
+                        <label>
+                            <input type="radio" name="watch" value="mobil">
+                            Мобильный вид
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="book">
+                            Электроная книга
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="paper">
+                            Газета
+                        </label>
+                    </div>
+                </label>
+                <div id="mobil-cards__nav" class="content__mobil__cards">
+                    <button>
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3 id="mobil-cards__status"><span>0</span> / <span>0</span></h3>
+                    <button>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobil__watch-area" class="content__mobil__watch-area">
+
+                </div>
+            </div>
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label class="active">
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
+                    <label class="content__header__nav-bar__search">
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <a href="content_21.html" class="next-one">
+                            <span>22</span>
+                            <img alt="arrow" src="img/arrow_L.svg" >
+                        </a>
+                        <a href="content_24.html" class="next-one">
+                            <img alt="arrow" src="img/arrow_R.svg" >
+                            <span>24</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="content__body__pages active">
+                    <div class="content__body__pages__header">
+                        <h1>ЦАРСКАЯ СЕМЬЯ</h1>
+                    </div>
+                    <div class="content__body__pages__wrapper wrapper-t2">
+                        <div class="content__body__pages__line-first">
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ИМПЕРАТОР</h3>
+                                <h2>НИКОЛАЙ II</h2>
+                                <p>
+                                    Родился 19 [6] мая 1868 года в семье
+                                    Императора Александра III и Императрицы Марии Федоровны. Будучи
+                                    Наследником Престола, он успешно
+                                    освоил программы юридического
+                                    факультета университета и Академии
+                                    Генерального штаба, в совершенстве
+                                    владел пятью языками. Став Императором Всероссийским в возрасте
+                                    26 лет, Николай II за четверть века
+                                    осуществил наиболее масштабные
+                                    преобразования за всю историю
+                                    Государства Российского, всегда
+                                    отстаивал национальные интересы
+                                    России.При этом Государь оставался замечательным семьянином — главой
+                                    семьи в христианском понимании
+                                    этого слова. Все свободное время
+                                    посвящал жене и детям, которых воспитывал в глубокой религиозности,
+                                    скромных потребностях, приучал
+                                    к физической закалке. Был для своих
+                                    родных примером редкого самообладания и порядочности. Все свои
+                                    средства Император Николай II пожертвовал на благотворительность,
+                                    строительство православных храмов
+                                    в России и за рубежом.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ВЕЛИКАЯ КНЯЖНА</h3>
+                                <h2>ОЛЬГА НИКОЛАЕВНА</h2>
+                                <p>
+                                    Родилась 16 [3] ноября 1895 года. Великая княжна с деттва спала на походной кровати, единственная из царских
+                                    дочерей всего один раз побывала на великосветском балу.
+                                    Знала несколько иностранных языков, прекрасно играла
+                                    на рояле и пела, рисовала, писала стихи, отлично ездила
+                                    верхом, увлекалась плаванием на байдарке и теннисом.
+                                    В свои юные годы умела шить, вязать и готовить, сама
+                                    гладила белье. Была шефом 3-го Елизаветградского гусарского полка. В годы Первой мировой войны возглавляла благотворительный «Ольгинский комитет», была
+                                    покровительницей пяти лазаретов, работала хирургической сестрой в операционных, перевязывала раненых,
+                                    прибывающих с фронта.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ВЕЛИКАЯ КНЯЖНА</h3>
+                                <h2>ТАТЬЯНА НИКОЛАЕВНА</h2>
+                                <p>
+                                    Родилась 11 июня [29 мая] 1897 года. С детства отличалась
+                                    ровным и сдержанным характером, не любила роскошь,
+                                    нянчилась с младшими сестрами и братом, помогала
+                                    матери в устройстве семейного быта, любила вышивать.
+                                    Получила прекрасное домашнее образование, знала несколько иностранных языков, занималась спортом. Была
+                                    шефом 8-го Вознесенского уланского полка. В годы Первой мировой войны Великая княжна Татьяна возглавляла
+                                    благотворительный «Татьянинский комитет», который
+                                    оказывал помощь беженцам. С семнадцати лет работала
+                                    хирургической сестрой в лазаретах и госпиталях. Во время
+                                    ссылки в Тобольске и Екатеринбурге проявляла трогательную заботу о больной матери и младшем брате Алексее.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-second">
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h2>АРИСТОКРАТИЗМ ДУХА</h2>
+                                <p>
+                                    «БРАК — ЭТО БОЖЕСТВЕННЫЙ ОБРЯД! ЭТО САМАЯ ТЕСНАЯ И САМАЯ СВЯТАЯ СВЯЗЬ НА ЗЕМЛЕ» — ТАКИЕ СТРОКИ ИЗ ДНЕВНИКА
+                                    ИМПЕРАТРИЦЫ АЛЕКСАНДРЫ ФЕДОРОВНЫ СОХРАНИЛО ДЛЯ НАС БОЖЕСТВЕННОЕ ПРОВИДЕНИЕ. ВОПРЕКИ ДРАМАТИЧЕСКОЙ
+                                    ЭПОХЕ И ЗАБВЕНИЮ ПРАВДА О СЕМЬЕ ПОСЛЕДНЕГО РОССИЙСКОГО ИМПЕРАТОРА ПРОБИЛАСЬ К НАМ, СТАЛА НАСТОЯЩИМ
+                                    ДУХОВНЫМ ОТКРОВЕНИЕМ. АРИСТОКРАТИЗМ ДУХА И ЛИЧНАЯ СКРОМНОСТЬ, ТРОГАТЕЛЬНАЯ ЗАБОТА ДРУГ О ДРУГЕ РОДИТЕЛЕЙ
+                                    И ДЕТЕЙ, ЖЕЛАНИЕ КАЖДОГО ИЗ НИХ ПРИНЕСТИ ПОЛЬЗУ ОТЕЧЕСТВУ И СВОЕМУ НАРОДУ, СТОЙКОСТЬ В ИСПЫТАНИЯХ — ВСЕ
+                                    ЭТО ВЫЗЫВАЕТ УВАЖЕНИЕ И ВОСХИЩЕНИЕ, СЛУЖИТ НРАВСТВЕННЫМ ПРИМЕРОМ ХРИСТИАНСКОЙ СЕМЕЙНОЙ ЛЮБВИ.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/slovo/temp.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ВЕЛИКИЙ КНЯЗЬ</h3>
+                                <h2>АЛЕКСЕЙ НИКОЛАЕВИЧ</h2>
+                                <p>
+                                    Родился 12 августа [30 июля]
+                                    1904 года. Несмотря на болезнь,
+                                    Цесаревич был общительным и подвижным ребенком, физические страдания закалили его дух и волю. Его
+                                    друзьями в детстве были сверстники
+                                    из простых семей, он любил общаться с крестьянами и солдатами. Цесаревич часто говорил: «Когда я буду
+                                    царем, не будет бедных и несчастных, я хочу, чтобы все были счастливы». Во время Первой мировой
+                                    войны Великий князь Алексей,
+                                    будучи шефом нескольких полков
+                                    и атаманом всех казачьих войск, часто с отцом выезжал на передовые
+                                    позиции, награждал отличившихся
+                                    воинов, подолгу бывал в лазаретах
+                                    для раненых. За личную храбрость
+                                    награжден Георгиевской серебряной медалью 4-й степени. Жертвовал
+                                    личные средства на помощь семьям
+                                    павших воинов. Стойко переносил
+                                    тяготы ссылки и заточения.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-third">
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ИМПЕРАТРИЦА</h3>
+                                <h2>АЛЕКСАНДРА ФЕДОРОВНА</h2>
+                                <p>
+                                    Родилась 6 июня [25 мая] 1872 года
+                                    в Дармштадте в семье великого герцога Гессенского и Рейнского Людвига IV и герцогини Алисы, дочери
+                                    английской королевы Виктории.
+                                    Будучи крещеной по лютеранскому обряду, Александра Федоровна
+                                    в 1894 году приняла православие,
+                                    всем сердцем полюбила Россию и ее
+                                    народ. Несмотря на слабое здоровье,
+                                    Императрица родила четырех дочерей и сына — Наследника Престола.
+                                    В своих детях она личным примером
+                                    воспитывала милосердие и сострадание, большую часть своего состояния потратила на строительство
+                                    православных храмов, возглавляла
+                                    ряд крупнейших благотворительных
+                                    обществ. Была одной из самых искусных рукодельниц России. В годы
+                                    Первой мировой войны Императрица
+                                    вместе со старшими дочерьми работала простой хирургической сестрой,
+                                    на собственные средства формировала военно-санитарные поезда для
+                                    фронта. Дневниковые записи и письма Александры Федоровны о религиозном и семейном долге вошли
+                                    в сокровищницу русской духовной
+                                    мысли.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ВЕЛИКАЯ КНЯЖНА</h3>
+                                <h2>МАРИЯ НИКОЛАЕВНА</h2>
+                                <p>
+                                    Родилась 26 [14] июня 1899 года. С детства спала на армейской складной кровати,
+                                    отличалась скромностью и веселым нравом, любила общаться с простыми людьми,
+                                    нянчилась с их детьми. Получила прекрасное домашнее
+                                    образование, знала английский и французский языки.
+                                    Была шефом 9-го Казанского драгунского полка. В годы
+                                    Первой мировой войны Великая княжна Мария жертвовала личные средства на лазареты и военно-санитарные
+                                    поезда, проявляла заботу о раненых в госпиталях. Во время
+                                    заточения в Ипатьевском доме в Екатеринбурге научилась
+                                    готовить, много занималась самообразованием, поддерживала родных в трудные минуты испытаний.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-18 fs-4">
+                                <h3>ВЕЛИКАЯ КНЯЖНА</h3>
+                                <h2>АНАСТАСИЯ НИКОЛАЕВНА</h2>
+                                <p>
+                                    Родилась 18 [5] июня 1901 года. Воспитывалась в спартанской обстановке.
+                                    С детства отличалась остроумием и артистичностью, участвовала в любительских спектак лях,
+                                    получила прекрасное образование, была отлично развита
+                                    физически. Являлась шефом 148-го Каспийского пехотного
+                                    полка. В годы Первой мировой войны Великая княжна
+                                    Анастасия жертвовала личные средства на содержание
+                                    лазаретов, покупку лекарств для раненых, организацию
+                                    благотворительных лотерей. Постоянно посещала госпитали, участвовала в приготовлении бинтов, пошиве белья
+                                    для солдат. Будучи в ссылке и заточении, никогда не падала
+                                    духом, стремилась облегчить быт своим родным.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+                <div id="calendar">
+                    <div class="content__header__page-bar">
+                        <div class="content__header__page-bar__frame"></div>
+                        <div class="content__header__page-bar__wrapper">
+                            <h1>Август</h1>
+                        </div>
+                    </div>
+                    <img src="img/calendar-no-hd.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/history_card.js"></script>
+</body>
+</html>

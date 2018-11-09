@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div id="pop-up__content"></div>
+    <div id="pop-up__call-back">
+    <div class="pop-up__header">
+        <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+        <button class="btn-close" type="button"></button>
+    </div>
+    <form>
+        <input type="text" name="userName" placeholder="Представтесь">
+        <input type="email" name="userEmail" placeholder="E-mail">
+        <input type="text" name="userSubject" placeholder="Тема комментария">
+        <input type="text" name="userAbout" placeholder="О себе">
+        <textarea placeholder="Текст" name="userComments"></textarea>
+        <div class="recapcha"></div>
+        <button class="button" type="submit">Отправить</button>
+    </form>
+</div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="welcome" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label>
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a class="active" href="news.html"><span>Новости</span></a>
+                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <h1>Новости</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome__body">
+                <div id="news-card">
+                    <div class="news-card__header">
+                      <span>21 сентября 2015</span>
+                      <span>Автор: <b>Владислав Майоров</b></span>
+                      <h2>ПЕРВАЯ ПРЕЗЕНТАЦИЯ В ЦАРСКОЙ ОБИТЕЛИ</h2>
+                    </div>
+                    <div class="news-card__body">
+                        <p>
+                            <b>Наверное, глубоко символично, что первая презентация календаря «Россия в эпоху правления императора Николая II 1894-1917. Реформы, преобразования, достижения» состоялась в Мужском монастыре святых Царственных Страстотерпцев  на Ганиной яме.</b>
+                        </p>
+                        <p>
+                            Монастырь – один из самых молодых в России. Он создан на месте острейших драматических событий, где была поставлена последняя точка в земной жизни членов последней Царской семьи. Именно сюда в июле 1918 года были привезены для уничтожения из ипатьевского дома Екатеринбурга тела членов Царской семьи, а также их верных слуг.
+                        </p>
+                        <p>
+                            В 1991 году по благословению архиепископа Свердловского и Курганского Мелхиседека на Ганиной яме был установлен первый Поклонный крест. 17 июля 1992 г. на место уничтожения останков Царской семьи прибыл первый архиерейский Крестный ход. В ночь на 17 июля 1995 г. у креста над Ганиной ямой была совершена первая Божественная Литургия.
+                        </p>
+                        <p>
+                            На юбилейном Архиерейском Соборе, проходившем в Москве 14 августа 2000 г., Царская семья была прославлена в чине святых Царственных Страстотерпцев. 23 сентября 2000 г. во время своего визита на уральскую землю Святейший Патриарх Алексий II посетил урочище Ганина яма. Предстоятель Русской Православной Церкви сказал: <b>«Все пространство Ганиной ямы – это живой Антиминс, пронизанный частицами сожженных святых мощей.</b> Лучшим увековечиванием памяти на Руси всегда было строительство Божиего храма или монастыря».
+                        </p>
+                        <p>
+                            Уже 28 декабря 2000 г. по благословению Святейшего Патриарха Московского и всея Руси Алексия II и решению Священного Синода на месте уничтожения останков членов Царской семьи был учрежден мужской монастырь святых Царственных Страстотерпцев. С этого момента началась новейшая история молодого монастыря. Его строителем стал схиигумен Сергий (Романов).
+                        </p>
+                        <p>
+                            Сегодня в монастыре построены семь деревянных храмов, установлены бюст Императора Николая II, бронзовая скульптура святой Страстотерпицы Александры Феодоровны, памятник «Царские дети». Все памятники связаны аллеей, ведущей в храм Царственных Страстотерпцев. В общий архитектурный ансамбль гармонично вписаны музей, колокольня. Сюда устремляются паломники из России и зарубежья, для них построен паломнический центр.
+                        </p>
+                        <p>
+                            Презентацию календаря провел его автор-составитель военный журналист полковник запаса Владислав Майоров. Среди тех, кто пришел на творческую встречу, были братия монастыря, сотрудники и паломники обители. Владислав Майоров отметил, что автором идеи историко-познавательного исследования является президент Свердловского регионального общественного благотворительного фонда «Таганский» Иван Вилкин, который вместе со своими соратниками из холдинга «Таганский ряд» построил храмы Николая Чудотворца и святого преподобного Серафима Саровского в Екатеринбурге, храм святого мученика Иоанна Воина в городе Березовском Свердловской области. Будучи одним из самых известных благотворителей и меценатов на Среднем Урале, он передал в дар монастырю 300 экземпляров календаря.
+                        </p>
+                        <p>
+                            Владислав Майоров рассказал о том, что календарь <b>«Россия в эпоху правления Императора Николая II. 1894-1917 годы. Реформы. Преобразования. Достижения»</b> является первым в России опытом историко-познавательного исследования эпохи именно в таком жанре. При подготовке календаря были использованы новейшие данные более 250 энциклопедий и фундаментальных исследовательских трудов. Проект получил поддержку Издательского Совета Московской Патриархии Русской Православной Церкви, Императорского Дома Романовых.
+                        </p>
+                        <p>
+                            <b>Цель проекта</b> – восстановление исторической справедливости в отношении одного из важнейших периодов в жизни России, всестороннее ознакомление наших современников с достижениями в области государственного строительства, экономики, социальной политики, обороноспособности Российской Империи в 23-летний период правления Императора Николая II, личной ролью Государя в проведении реформ и преобразований. Календарь отражает три важнейших направления реформ  – экономическое, социальное и военно-политическое, а также вопросы религиозной и церковной жизни, участия Императорского Дома Романовых в благотворительной деятельности, личные воспоминания руководителей зарубежных государств и выдающихся отечественных деятелей об Императоре Николае II.
+                        </p>
+                        <p>
+                            Автор-составитель календаря прокомментировал его каждую страницу, рассказал о важнейших реформах и достижениях, достигнутых  Российской империей в период правления Николая II, ответил на вопросы собравшихся. Творческая встреча стала диалогом, живым обменом мнениями.
+                        </p>
+                        <p>
+                            Благочинный монастыря иеромонах Иов по благословению наместника Царской обители архимандрита Пимена вручил автору составителю монастырскую грамоту и подарок. Также грамота была передана для автора идеи исследовательского проекта Ивана Вилкина, Президента Свердловского регионального общественного благотворительного фонда «Таганский». В этот же день на православном телеканале «Союз» был показан телерепортаж о презентации календаря.
+                        </p>
+                        <div class="news-card__body__slider">
+                            <div id="slider-content-watch"></div>
+                            <div id="slider-nav-bar">
+                                <button><img src="img/arrow_L.svg"></button>
+                                <button><img src="img/arrow_R.svg"></button>
+                                <div class="content">
+
+                                </div>
+                            </div>
+                            <div id="slider-all-content">
+                                <img src="img/fphoto/news/6/1.jpg">
+                                <img src="img/fphoto/news/6/2.jpg">
+                                <img src="img/fphoto/news/6/3.jpg">
+                                <img src="img/fphoto/news/6/4.jpg">
+                                <img src="img/fphoto/news/6/5.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card__footer">
+                        <a href="news-5.html">
+                            <img src="img/arrow_L.svg">
+                            <h3>
+                                РАЗГОВОР ОБ ЭПОХЕ НА ПАТРИАРШЕМ ПОДВОРЬЕ
+                            </h3>
+                        </a>
+                        <a style="display: none;" href="#">
+                            <img src="img/arrow_R.svg">
+                            <h3>
+                                КОНФЕРЕНЦИЯ «УРАЛ В СУДЬБЕ РОМАНОВЫХ» – В ВЕДУЩЕМ ЭКОНОМИЧЕСКОМ ВУЗЕ РЕГИОНА
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>

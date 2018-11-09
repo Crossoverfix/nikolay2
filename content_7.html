@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="js/hammer.js"></script>
+</head>
+<body class="mobil-mods">
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div class="pop-up__wrapper">
+        <div class="clone" id="clone-nav"></div>
+        <button type="button" class="btn-close"></button>
+        <div class="pop-up__nav">
+            <div id="nav-bar">
+                <button type="button"><img alt="arrows" src="img/arrow_L.svg"></button>
+                <button type="button"><img alt="arrows" src="img/arrow_R.svg"></button>
+            </div>
+            <div id="status-bar">
+                <span>0</span> / <span>0</span>
+            </div>
+        </div>
+        <div id="pop-up__content"></div>
+    </div>
+    <div id="pop-up__call-back">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<button id="toggler-mobil">
+    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+    Переключить обратно на мобильный вид
+</button>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="newspaper" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__mobil">
+                <div class="content__mobil__pages">
+                    <div id="mobil-pages__nav" class="content__mobil__pages__nav">
+                        <a href="content_6.html">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <h2>Глава 7</h2>
+                        <a href="content_8.html">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <h1>Научный прорыв</h1>
+                </div>
+                <label id="mobil-watch-v2">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <input id="collapse-watch" type="checkbox">
+                    <div>
+                        <label>
+                            <input type="radio" name="watch" value="mobil">
+                            Мобильный вид
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="book">
+                            Электроная книга
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="paper">
+                            Газета
+                        </label>
+                    </div>
+                </label>
+                <div id="mobil-cards__nav" class="content__mobil__cards">
+                    <button>
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3 id="mobil-cards__status"><span>0</span> / <span>0</span></h3>
+                    <button>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobil__watch-area" class="content__mobil__watch-area">
+
+                </div>
+            </div>
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label class="active">
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
+                    <label class="content__header__nav-bar__search">
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <a href="content_6.html" class="next-one">
+                            <span>6</span>
+                            <img alt="arrow" src="img/arrow_L.svg" >
+                        </a>
+                        <a href="content_8.html" class="next-one">
+                            <img alt="arrow" src="img/arrow_R.svg" >
+                            <span>8</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="content__body__pages active">
+                    <div class="content__body__pages__header">
+                        <h1>НАУЧНЫЙ ПРОРЫВ</h1>
+                    </div>
+                    <div class="content__body__pages__wrapper wrapper-t1">
+                        <div class="content__body__pages__line-first">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/nauchniy_proriv/nauch_pror_1@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card mini-card cs-mt-one">
+                                <h2>ЦИФРЫ И ДОСТИЖЕНИЯ</h2>
+                            </div>
+                            <div class="content__body__pages__card__mini-wrap">
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        императорская
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f10">
+                                        санкт-петербургская
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f11">
+                                        академия наук
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1914 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        42
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        академика
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f16">
+                                        49
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        почетных
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        академиков
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f16">
+                                        239
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        членов-
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f10">
+                                        корреспондентов
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        научные
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        общества
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        России
+                                    </p>
+                                    <p class="sf-b sf-f11">
+                                        в 1917 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f12">
+                                        более
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f16">
+                                        300
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1-fill">
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        лауреаты
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        нобелевской
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        премии
+                                    </p>
+                                    <p class="sf-b sf-mr-5 sf-f11">
+                                        к 1917 году
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        И.П.Павлов
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f11">
+                                        (1904 г.)
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f13">
+                                        И.И.Мечников
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f11">
+                                        (1908 г.)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-second">
+                            <div class="content__body__pages__card cs-6 fs-8">
+                                <h2>ИМПЕРАТОР НИКОЛАЙ II</h2>
+                                <p>
+                                    ГЛУБОКО ПОНИМАЛ РОЛЬ И ЗНАЧЕНИЕ НАУКИ В ЖИЗНИ
+                                    ГОСУДАРСТВА И ОБЩЕСТВА, ВИДЕЛ В НЕЙ НЕОБХОДИМУЮ
+                                    ОСНОВУ ЭКОНОМИЧЕСКОГО И ДУХОВНОГО ПРОЦВЕТАНИЯ
+                                    РОССИИ. НАУЧНАЯ РЕВОЛЮЦИЯ — ОДНО ИЗ ВЫДАЮЩИХСЯ
+                                    ЯВЛЕНИЙ ЭПОХИ ЕГО ПРАВЛЕНИЯ. ЗА НЕБОЛЬШОЙ ИСТОРИЧЕСКИЙ СРОК БЫЛ СОВЕРШЕН НАСТОЯЩИЙ ПРОРЫВ В ОБЛАСТИ ЕСТЕСТВЕННЫХ И ТЕХНИЧЕСКИХ НАУК, СОЗДАНЫ
+                                    УНИКАЛЬНЫЕ НАУЧНЫЕ ШКОЛЫ. ПРИ ГОСУДАРЕ НИКОЛАЕ II
+                                    РУССКАЯ НАУКА ПОЛУЧИЛА МИРОВОЕ ПРИЗНАНИЕ.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-17 fs-3">
+                                <h2>ВЫСШЕЕ НАУЧНОЕ УЧРЕЖДЕНИЕ</h2>
+                                <p>
+                                    Императорская
+                                    Санкт-Петербургская
+                                    академия наук являлась высшим
+                                    научным учреждением страны.
+                                    К ее структуре относились
+                                    5 лабораторий, крупнейших в Европе,
+                                    а также 6 музеев, Русский археологический институт в Константинополе,
+                                    8 обсерваторий мирового уровня,
+                                    34 комиссии и комитета,
+                                    11 университетов.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/nauchniy_proriv/nauch_pror_4@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-15 fs-5">
+                                <h2>67 ТЫСЯЧ ТОМОВ ОТ ИМПЕРАТОРА</h2>
+                                <p>
+                                    Император Николай II был Почетным членом Академии наук, Почетным председателем Императорского русского исторического общества.
+                                    Он значительно увеличил расходы на развитие фундаментальной и прикладной науки, поддержал создание отраслевых НИИ. Блестящий знаток
+                                    русской истории и искусства XIV–XVII веков, Государь собрал уникальную
+                                    коллекцию исторических документов, старинных книг, научных изданий
+                                    (67 тысяч томов), ставшую основой Российской национальной и Российской государственной библиотек.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/nauchniy_proriv/nauch_pror_3@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-16 fs-12">
+                                <h2>ПОЧЕТНЫЙ ДИПЛОМ ИМПЕРАТРИЦЕ</h2>
+                                <p>
+                                    Императрица Александра Федоровна за содействие ученым была награждена почетным дипломом Русского археологического института. Исключительный интерес для
+                                    науки представляют коллекции древностей, собрания книг и произведений искусства,
+                                    составленные Государыней. Комитет по устройству Музея изящных искусств им. Императора Александра III
+                                    в Москве назвал Пергамский зал в честь Императрицы за активное содействие в строительстве. Под покровительством Александры Федоровны
+                                    находилось Императорское Общество востоковедения.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-third">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/nauchniy_proriv/nauch_pror_2@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-13 fs-2">
+                                <h2>ОТКРЫТИЯ МИРОВОГО УРОВНЯ</h2>
+                                <p class="sf-f8">
+                                    <b class="sf-b">В ОБЛАСТИ ФИЗИКИ </b>
+                                    Русские ученые-физики открыли
+                                    воздействие рентгеновских лучей
+                                    на электрический разряд, заложили
+                                    основы радиологии дисперсных систем. Открытием мирового значения
+                                    стало измерение давления света на
+                                    твердые тела и газы. Было экспериментально доказано существование
+                                    ионной проводимости в кристаллах,
+                                    открыт ферромагнитный резонанс.
+                                    <br><b class="sf-b">В ОБЛАСТИ АСТРОНОМИИ </b>
+                                    Звездные каталоги, составленные в России в 1905 году, были наиболее точными в мире,
+                                    а выполненные в обсерватории наблюдения включены в известные мировые фундаментальные каталоги. Классификация кометных форм
+                                    Ф. А. Бредихина, создавшего школу астрономов-астрофизиков, сохранилась
+                                    и в настоящее время. В те годы разрабатывались основы отечественной сейсмологии, методы применения астрофотографии для определения параллаксов
+                                    звезд, изучения звездных туманностей и скоплений. Работы К. Э. Циолковского
+                                    по теории реактивного движения и теоретическому обоснованию возможности
+                                    космических полетов опередили свое время.
+                                    <br><b class="sf-b">В ОБЛАСТИ МАТЕМАТИКИ </b>
+                                    Под руководством П. Л. Чебышева,
+                                    одного из основателей теории синтеза механизмов, сложилась
+                                    получившая мировое признание математическая школа в Санкт-Петербурге.
+                                    Ее представители внесли ценный
+                                    вклад в разработку теорий приближения функций и дифференциальных уравнений,
+                                    теории чисел, теории вероятностей, в математический
+                                    анализ и математическую физику.
+                                    Возникла научная школа математической физики, положено начало
+                                    московской школе теории функций.
+                                    <br><b class="sf-b">В ОБЛАСТИ ХИМИИ </b>
+                                    Н. Н. Бекетов способствовал развитию физической химии как самостоятельной дисциплины,
+                                    заложил основы алюминотермии. В России была создана биохимическая научная
+                                    школа. В. Н. Ипатьев внес революционный
+                                    вклад в органический катализ при высоких
+                                    температурах и давлениях. Один из крупнейших химиков-органиков Н. Д. Зелинский
+                                    синтезировал новые циклические углеводороды, открыл дегидрогенизационный катализ.
+                                    А. Е. Арбузов первым осуществил научные
+                                    работы в области синтеза и изучения фосфорорганических соединений, открыл универсальную реакцию получения органических
+                                    производных фосфора. Л. А. Чугаев поднял
+                                    на мировой уровень изучение координационных соединений. Фундаментальный вклад
+                                    Н. С. Курнакова в химию связан с созданием
+                                    физико-химического анализа. Н. А. Шилов
+                                    разработал теорию сопряженных химических
+                                    реакций.
+                                    <br><b class="sf-b">В ОБЛАСТИ БИОЛОГИИ </b>
+                                    С деятельностью А. Я. Данилевского связано становление биохимии как самостоятельной науки. Отечественные биологи
+                                    внесли существенный вклад в развитие
+                                    микробиологии. В те годы была основана эволюционная палеонтология, создана
+                                    российская школа биофизиков.
+                                    <br><b class="sf-b">В ОБЛАСТИ МАШИНОВЕДЕНИЯ</b>
+                                    Основоположники машиноведения в России А. И. Сидоров и П. Л. Чебышев заложили
+                                    основы теории машин и механизмов. Была создана теория структуры и классификации
+                                    плоских механизмов, предложен метод кинематического анализа, развита теория зубчатых механизмов.
+                                    А. Н. Крылов впервые в мире разработал ставшие классическими
+                                    рациональные приемы и схемы для вычисления остойчивости и плавучести корабля,
+                                    теорию килевой качки, таблицы непотопляемости судов, создал теорию вибрации судов.
+                                    <br><b class="sf-b">В ОБЛАСТИ РАДИОСВЯЗИ </b>
+                                    Работы А. С. Попова в области радиосвязи привели к созданию первых радиостанций.
+                                    Была сформирована новая отрасль науки и техники — радиолокация, развернулись
+                                    исследовательские работы по радиопеленгации. Первые отечественные электронные приборы
+                                    созданы в 1910–1917 годах. Б. Л. Розингом проведены первые удачные опыты по передаче
+                                    изображения на расстояние, заложившие основы электроскопии — будущего телевидения.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-12 fs-7">
+                                <h2>НАСЛЕДИЕ АКАДЕМИКА ВЕРНАДСКОГО</h2>
+                                <p>
+                                    Академик Императорской Санкт-Петербургской
+                                    академии наук Владимир Вернадский — основоположник геохимии, биогеохимии, радиологии, гидрогеологии, организатор
+                                    и директор Радиевого института, биогеохимической лаборатории. Академик В. И. Вернадский
+                                    в 1915 году возглавил Комиссию по изучению
+                                    естественных производительных сил России
+                                    (КЕПС), которая содействовала мобилизации
+                                    природных ресурсов для нужд обороны, активному вовлечению их в хозяйственный оборот.
+                                    Благодаря научному обоснованию Вернадского
+                                    впоследствии были открыты 16 отраслевых
+                                    НИИ. В 1930 году на основе КЕПС был создан
+                                    Совет по изучению производительных сил СССР
+                                    Академии наук СССР.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+                <div id="calendar">
+                    <div class="content__header__page-bar">
+                        <div class="content__header__page-bar__frame"></div>
+                        <div class="content__header__page-bar__wrapper">
+                            <h1>Август</h1>
+                        </div>
+                    </div>
+                    <img src="img/calendar-no-hd.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/history_card.js"></script>
+</body>
+</html>

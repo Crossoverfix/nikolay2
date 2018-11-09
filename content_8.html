@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Newspaper</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="js/hammer.js"></script>
+</head>
+<body class="mobil-mods">
+<div id="pop-up">
+    <div class="pop-up__shadow"></div>
+    <div class="pop-up__wrapper">
+        <div class="clone" id="clone-nav"></div>
+        <button type="button" class="btn-close"></button>
+        <div class="pop-up__nav">
+            <div id="nav-bar">
+                <button type="button"><img alt="arrows" src="img/arrow_L.svg"></button>
+                <button type="button"><img alt="arrows" src="img/arrow_R.svg"></button>
+            </div>
+            <div id="status-bar">
+                <span>0</span> / <span>0</span>
+            </div>
+        </div>
+        <div id="pop-up__content"></div>
+    </div>
+    <div id="pop-up__call-back">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__call-us">
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="pop-up__calendar">
+        <div class="pop-up__header">
+            <h2>В этот день</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <h2 id="calendar-text"></h2>
+    </div>
+</div>
+<button id="toggler-mobil">
+    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+    Переключить обратно на мобильный вид
+</button>
+<header>
+    <button id="collapse__button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div id="mobil-menu">
+        <input type="checkbox" id="collapse__mobil-menu">
+        <div class="mobil-menu__header">
+            <div class="mobil-menu__wrapper">
+                <button class="mobil-menu__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label class="content__header__nav-bar__search">
+                    <input type="text">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <label for="collapse__mobil-menu" class="mobil-menu__back">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <h2>Историческая справка</h2>
+                </label>
+                <h2>Меню</h2>
+            </div>
+        </div>
+        <div class="mobil-menu__body mobil-menu__wrapper">
+            <div class="mobil-menu__body__primary-wrapper">
+                <a href="index.html">Главная</a>
+                <label for="collapse__mobil-menu">Историческая справка</label>
+                <a href="calendar.html">Календарь</a>
+                <a href="comments.html">Отзывы</a>
+                <a href="news.html">Новости</a>
+            </div>
+            <ol class="mobil-menu__body__secondary-wrapper">
+                <li><a href="content_1.html">Денежная реформа</a></li>
+                <li><a href="content_2.html">Аграрная реформа</a></li>
+                <li><a href="content_3.html">Индустриализация страны</a></li>
+                <li><a href="content_4.html">Электрификация страны</a></li>
+                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                <li><a href="content_7.html">Научный прорыв</a></li>
+                <li><a href="content_8.html">Русское географическое общество</a></li>
+                <li><a href="content_9.html">Народное образование</a></li>
+                <li><a href="content_10.html">Правовое государство</a></li>
+                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                <li><a href="content_13.html">Спортивное движение</a></li>
+                <li><a href="content_14.html">Военная реформа</a></li>
+                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                <li><a href="content_17.html">Рельсы империи</a></li>
+                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                <li><a href="content_21.html">Внешняя политика</a></li>
+                <li><a href="content_22.html">У истоков миротворества</a></li>
+                <li><a href="content_23.html">Царская семья</a></li>
+                <li><a href="content_24.html">Слово об императоре</a></li>
+            </ol>
+        </div>
+        <div class="mobil-menu__footer mobil-menu__wrapper">
+            <div class="header__social-link">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div key="call-back" class="header__call-back">
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="index.html" class="header__text">
+            <img alt="emblem" src="img/emblem_ri.svg">
+            <div class="header__text__wrapper">
+                <img alt="logo" src="img/Logo.svg">
+            </div>
+            <img alt="emblem" src="img/emblem_n2.svg">
+        </a>
+    </div>
+</header>
+<main>
+    <div id="newspaper" class="container">
+        <div class="container__frame"></div>
+        <div class="row">
+            <div class="content__mobil">
+                <div class="content__mobil__pages">
+                    <div id="mobil-pages__nav" class="content__mobil__pages__nav">
+                        <a href="content_7.html">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <h2>Глава 8</h2>
+                        <a href="content_9.html">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <h1>Русское географическое общество</h1>
+                </div>
+                <label id="mobil-watch-v2">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <input id="collapse-watch" type="checkbox">
+                    <div>
+                        <label>
+                            <input type="radio" name="watch" value="mobil">
+                            Мобильный вид
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="book">
+                            Электроная книга
+                        </label>
+                        <label>
+                            <input type="radio" name="watch" value="paper">
+                            Газета
+                        </label>
+                    </div>
+                </label>
+                <div id="mobil-cards__nav" class="content__mobil__cards">
+                    <button>
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3 id="mobil-cards__status"><span>0</span> / <span>0</span></h3>
+                    <button>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobil__watch-area" class="content__mobil__watch-area">
+
+                </div>
+            </div>
+            <div class="content__header">
+                <div class="content__header__nav-bar">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <label class="active">
+                        <input type="checkbox">
+                        <span>Историческая справка</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                                <li><a href="content_5.html">Ведущая энергетическая страна</a></li>
+                                <li><a href="content_6.html">Народное здравоохранение</a></li>
+                                <li><a href="content_7.html">Научный прорыв</a></li>
+                                <li><a href="content_8.html">Русское географическое общество</a></li>
+                                <li><a href="content_9.html">Народное образование</a></li>
+                                <li><a href="content_10.html">Правовое государство</a></li>
+                                <li><a href="content_11.html">Внешняя и внутреняя торговля</a></li>
+                                <li><a href="content_12.html">Водные и сухопутные пути сообщения</a></li>
+                                <li><a href="content_13.html">Спортивное движение</a></li>
+                                <li><a href="content_14.html">Военная реформа</a></li>
+                                <li><a href="content_15.html">Верховный главнокомандующий</a></li>
+                                <li><a href="content_16.html">Религиозная и церковная жизнь</a></li>
+                                <li><a href="content_17.html">Рельсы империи</a></li>
+                                <li><a href="content_18.html">Почта, телеграф, телефон</a></li>
+                                <li><a href="content_19.html">Благотворительность и меценатство</a></li>
+                                <li><a href="content_20.html">Рождение русской авиации</a></li>
+                                <li><a href="content_21.html">Внешняя политика</a></li>
+                                <li><a href="content_22.html">У истоков миротворества</a></li>
+                                <li><a href="content_23.html">Царская семья</a></li>
+                                <li><a href="content_24.html">Слово об императоре</a></li>
+                            </ol>
+                        </div>
+                    </label>
+                    <a href="calendar.html"><span>Календарь</span></a>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
+                    <label class="content__header__nav-bar__search">
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <a href="content_7.html" class="next-one">
+                            <span>7</span>
+                            <img alt="arrow" src="img/arrow_L.svg" >
+                        </a>
+                        <a href="content_9.html" class="next-one">
+                            <img alt="arrow" src="img/arrow_R.svg" >
+                            <span>9</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="content__body__pages active">
+                    <div class="content__body__pages__header">
+                        <h1>РУССКОЕ ГЕОГРАФИЧЕСКОЕ ОБЩЕСТВО</h1>
+                    </div>
+                    <div class="content__body__pages__wrapper wrapper-t1">
+                        <div class="content__body__pages__line-first">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/rus_geogrfi/rus_geo_1@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card mini-card cs-mt-one">
+                                <h2>ЦИФРЫ И ДОСТИЖЕНИЯ</h2>
+                            </div>
+                            <div class="content__body__pages__card__mini-wrap">
+                                <div class="content__body__pages__card mini-card cs-mt-1-fill">
+                                    <p class="sf-b sf-ttu sf-f11">
+                                        географические
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        открытия
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1894-1916 годах
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f18">
+                                        42
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f14">
+                                        экспедиции
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        первый
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        в мире
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        ледокольный
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        флот
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1899-1916 годах
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f13">
+                                        арктического
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f13">
+                                        класса
+                                    </p>
+                                </div>
+                                <div class="content__body__pages__card mini-card cs-mt-1">
+                                    <p class="sf-b sf-ttu sf-f16">
+                                        первый
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f14">
+                                        в мире
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        сквозной
+                                    </p>
+                                    <p class="sf-b sf-ttu sf-f13">
+                                        рейс
+                                    </p>
+                                    <p class="sf-b sf-f10">
+                                        в 1914-1915 годах
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        северный
+                                    </p>
+                                    <p class="sf-b sf-ttu  sf-f12">
+                                        морской путь
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-second">
+                            <div class="content__body__pages__card cs-6 fs-8">
+                                <h2>ИМПЕРАТОР НИКОЛАЙ II</h2>
+                                <p>
+                                    В ПЕРВЫЙ ГОД ЦАРСТВОВАНИЯ ПРИНЯЛ ПОД ПОКРОВИТЕЛЬСТВО ИМПЕРАТОРСКОЕ РУССКОЕ ГЕОГРАФИЧЕСКОЕ ОБЩЕСТВО,
+                                    БЫЛ ЕГО ПОПЕЧИТЕЛЕМ И ПОЧЕТНЫМ ЧЛЕНОМ. В ГОДЫ ПРАВЛЕНИЯ НИКОЛАЯ II
+                                    БЫЛИ ОРГАНИЗОВАНЫ КРУПНЕЙШИЕ ЭКСПЕДИЦИИ
+                                    В ЦЕНТРАЛЬНУЮ АЗИЮ, АРКТИКУ, ЗАБАЙКАЛЬЕ И НА
+                                    ДАЛЬНИЙ ВОСТОК, ПОСТРОЕНЫ ПЕРВЫЕ В МИРЕ ЛЕДОКОЛЫ АРКТИЧЕСКОГО КЛАССА.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-5 fs-3">
+                                <h2>ДЛЯ НАУКИ И РОССИИ</h2>
+                                <p>
+                                    Император Николай II в январе
+                                    1896 года в два раза увеличил
+                                    субсидии Императорскому Русскому географическому обществу.
+                                    В 1901 году при содействии Государя были выделены средства
+                                    на строительство здания Общества в центре Санкт-Петербурга.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-1 fs-4">
+                                <h2 class="sf-f18">АРАЛЬСКОЕ МОРЕ-14 ТОМОВ</h2>
+                                <p>
+                                    При попечительстве
+                                    Николая II с 1899-го по 1907
+                                    год на Аральском море
+                                    работала экспедиция
+                                    Туркестанского отдела РГО
+                                    под руководством Л. Берга.
+                                    По ее результатам
+                                    было напечатано
+                                    14 томов исследований.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-7 fs-4">
+                                <h2>ЛЕДОКОЛЬНЫЙ ФЛОТ РОССИИ</h2>
+                                <p>
+                                    своим рождением обязан Императору Николаю II, который в 1897 году
+                                    принял решение о строительстве первого в мире ледокола арктического класса
+                                    «Ермак» (1899 г.). Позже были построены ледоколы «Байкал» (1899 г.), «Ангара» (1900 г.), «Таймыр» и «Вайгач» (1909 г.), «Святогор» (1916 г.). Почти все
+                                    они прослужили в СССР до 1960-х годов, «Святогор» («Красин») — до 1989 г.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/rus_geogrfi/rus_geo_2@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-3 fs-5">
+                                <P>ЭКСПЕДИЦИЯ ВИЦЕ-АДМИРАЛА С.МАКАРОВА</P>
+                                <h2 class="sf-f16">НА ЗЕМЛЮ ФРАНЦА-ИОСИФА</h2>
+                                <p>
+                                    в 1901 году впервые обследовала южные и юго-западные берега
+                                    архипелага, установив его размеры. Экспедиция И. Ислямова в 1914 году
+                                    водрузила на Земле Франца-Иосифа Российский флаг и объявила
+                                    архипелаг российской территорией.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-7 fs-4">
+                                <p>
+                                    Гидрографическая экспедиция Северного Ледовитого океана (1910–1915)
+                                    выполнила описание северного побережья Восточной Сибири,
+                                    открыла Землю Императора Николая II (Северную Землю),
+                                    остров Цесаревича Алексея (Малый Таймыр),
+                                    Остров Старокадомского. В 1914–1915 годах Б. Вилькицкий совершил
+                                </p>
+                                <h2>ПО СЕВЕРНОМУ МОРСКОМУ ПУТИ</h2>
+                                <p>
+                                    первое сквозное плавание из Владивостока в Архангельск.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content__body__pages__line-third">
+                            <div class="content__body__pages__card cs-bg">
+                                <div class="img-wrapper">
+                                    <img alt="img" src="img/fphoto/card/rus_geogrfi/rus_geo_5@3x.png">
+                                </div>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-2">
+                                <P>ПЕРВЫЙ В РОССИИ</P>
+                                <h2>БАРГУЗИНСКИЙ ЗАПОВЕДНИК</h2>
+                                <p>
+                                    (площадь 374,3 тыс. га)
+                                    был основан в 1916 году
+                                    Указом Императора Николая II.
+                                    Основа научных исследований
+                                    в заповеднике была заложена
+                                    экспедицией под руководством
+                                    Г. Доппельмайера в 1914–1915 годах
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-7">
+                                <P>ИССЛЕДОВАНИЯ ГОРНОЙ ГРЯДЫ</P>
+                                <h2 class="sf-f22">СИХОТЭ-АЛИНЯ И БАССЕЙНА РЕКИ ЗЕИ</h2>
+                                <p>
+                                    (1894–1896 гг.) были впервые проведены Д. Ивановым в зоне Транссибирск
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-10">
+                                <h2>НА ВОСХОДЕ РУССКОГО СОЛНЦА</h2>
+                                <p>
+                                    Охотско-Камчатская
+                                    экспедиция (1896–1898 гг.)
+                                    позволила К. Богдановичу
+                                    и Н. Лелякину составить карту
+                                    побережья Охотского моря
+                                    от устья Амура до Охотска.
+                                    Камчатская экспедиция
+                                    (1908–1910 гг.) провела
+                                    комплексные исследования
+                                    этнографии, геологии,
+                                    метеорологии, ботаники,
+                                    зоологии Северо-Востока
+                                    Российской империи.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-15 fs-10">
+                                <h2>ПО ДИКИМ МЕСТАМ ЗАБАЙКАЛЬЯ</h2>
+                                <p>
+                                    Забайкальские экспедиции (1895–1898 гг.) В. Обручева, А. Герасимова, А. Гедройца
+                                    позволили создать новую карту Южного Забайкалья, точно определить гидрографическую сеть страны.
+                                    В 1901–1917 годах экспедициями А. Герасимова, Н. Хондажевского,
+                                    И. Толмачева были составлены карты западной части Алданского нагорья, Патомского
+                                    и Северо-Байкальского нагорий, Анабарского плато.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-13 fs-6">
+                                <h2 class="sf-f42">ОТКРЫТИЕ СИБИРСКИХ УВАЛОВ</h2>
+                                <p>
+                                    произошло благодаря самой длительной экспедиции, когда русскими
+                                    исследователями в 1890–1902 годах было пройдено 28,5 тыс. км.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-8">
+                                <h2>ЭФИОПСКОЕ НАГОРЬЕ</h2>
+                                <p>
+                                    А. Булатович в 1897–1899 годах
+                                    впервые в мире
+                                    произвел комплексное исследование
+                                    западного, центрального и южного
+                                    районов Эфиопского нагорья,
+                                    а также съемку реки Омо.
+                                </p>
+                            </div>
+                            <div class="content__body__pages__card cs-11 fs-8">
+                                <h2 class="sf-mr-4">ХАРА-ХОТО - МИРОВАЯ СЕНСАЦИЯ</h2>
+                                <p>
+                                    Монголо-Камская экспедиция (1899–1901 гг.) П. Козлова нанесла на карту крупнейшие
+                                    хребты в Восточном и Центральном Тибете. Монголо-Сычуаньская (1907–1909 гг.)
+                                    экспедиция П. Козлова при раскопках «мертвого» города Хара-Хото
+                                    в южной части пустыни Гоби восстановила историю забытого тангутского государства Си-Ся (982–1227 гг.),
+                                    что стало мировой сенсацией.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__footer">
+                <div id="calendar">
+                    <div class="content__header__page-bar">
+                        <div class="content__header__page-bar__frame"></div>
+                        <div class="content__header__page-bar__wrapper">
+                            <h1>Август</h1>
+                        </div>
+                    </div>
+                    <img src="img/calendar-no-hd.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer__first-b">
+            <img align="left" alt="logo" src="img/gerb.svg">
+            <div class="footer__text">
+                <p>Российская империя в эпоху</p>
+                <p>правления Императора Николая II</p>
+                <a href="WWW.ЭПОХА-НИКОЛАЯ-2.РФ">WWW.ЭПОХА-НИКОЛАЯ-2.РФ</a>
+            </div>
+        </div>
+        <div class="footer__second-b">
+            <img src="img/fond.svg">
+        </div>
+        <div class="footer__third-b">
+            <img align="left" alt="logo" src="img/tagansk.svg">
+            <p>При поддержке</p>
+            <p>ЗАО “Таганский ряд”</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© Все права защищены 2018г. ЗАО “Таганский ряд”</p>
+        <div class="header__social-link">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div key="call-back" class="header__call-back">
+            <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>Написать</span>
+            </a>
+        </div>
+        <a href="mailto:office@taganka-e.ru">office@taganka-e.ru</a>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/history_card.js"></script>
+</body>
+</html>
