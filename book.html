@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Newspaper</title>
+    <title>Николай II</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
@@ -21,20 +21,20 @@
     <div class="pop-up__shadow"></div>
     <div id="pop-up__content"></div>
     <div id="pop-up__call-back">
-    <div class="pop-up__header">
-        <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
-        <button class="btn-close" type="button"></button>
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
     </div>
-    <form>
-        <input type="text" name="userName" placeholder="Представтесь">
-        <input type="email" name="userEmail" placeholder="E-mail">
-        <input type="text" name="userSubject" placeholder="Тема комментария">
-        <input type="text" name="userAbout" placeholder="О себе">
-        <textarea placeholder="Текст" name="userComments"></textarea>
-        <div class="recapcha"></div>
-        <button class="button" type="submit">Отправить</button>
-    </form>
-</div>
     <div id="pop-up__call-us">
         <div class="pop-up__header">
             <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
@@ -201,98 +201,194 @@
                             </ol>
                         </div>
                     </label>
-                    <a href="calendar.html"><span>Календарь</span></a>
-                    <a href="comments.html"><span>Отзывы</span></a>
-                    <a class="active" href="news.html"><span>Новости</span></a>
-                    <label class="content__header__nav-bar__search">
-                        <input type="text">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                    <a href="#"><span>Эпоха Николая II</span></a>
+                    <a href="#"><span>Личность Николая II</span></a>
+                    <label class="active relative" class="relative">
+                        <input type="checkbox">
+                        <span>Библиотека</span>
+                        <div>
+                            <ol>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                            </ol>
+                        </div>
                     </label>
+                    <label class="relative">
+                        <input type="checkbox">
+                        <span>Кинозал</span>
+                        <div>
+                            <ul>
+                                <li><a href="content_1.html">Денежная реформа</a></li>
+                                <li><a href="content_2.html">Аграрная реформа</a></li>
+                                <li><a href="content_3.html">Индустриализация страны</a></li>
+                                <li><a href="content_4.html">Электрификация страны</a></li>
+                            </ul>
+                        </div>
+                    </label>
+                    <a href="comments.html"><span>Отзывы</span></a>
+                    <a href="news.html"><span>Новости</span></a>
                 </div>
                 <div class="content__header__page-bar">
                     <div class="content__header__page-bar__frame"></div>
                     <div class="content__header__page-bar__wrapper">
-                        <h1>Новости</h1>
+                        <h1>Библиотека</h1>
                     </div>
                 </div>
             </div>
             <div class="welcome__body">
-                <div id="news">
-                    <!--<div class="news__pages">-->
-                        <!--<button><img alt="arrows" src="img/arrow_L.svg"></button>-->
-                        <!--<button><img alt="arrows" src="img/arrow_R.svg"></button>-->
-                        <!--<div>-->
-                            <!--<a href="news.html">1</a>-->
-                            <!--<a href="news.html">2</a>-->
-                            <!--<a href="news.html">3</a>-->
-                            <!--<a href="news.html">4</a>-->
-                            <!--<a href="news.html">5</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                <div id="book">
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Последний царь</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Николай II</a>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Император Николай II</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Николай II</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Росиия в эпоху царствования Императора Николая II Благочестивого</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Внешняя политика Императора Николая II (1984-1917)</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Последний Император России</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Следствие по делу об убийстве императорской семьи</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">История России, которую приказали забыть</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <a href="book-more.html" class="books__img">
+                            <img src="img/test_img.png" alt="book">
+                        </a>
+                        <div class="books__info">
+                            <a href="book-more.html" class="books__info__link">Дневник Императора Николая II (1984-1917)</a>
+                            <p>Автор: <b>А.Н.Боханов</b></p>
+                        </div>
+                    </div>
+                    <div class="news__pages">
+                    <button><img alt="arrows" src="img/arrow_L.svg"></button>
+                    <button><img alt="arrows" src="img/arrow_R.svg"></button>
+                    <div>
+                    <a href="news.html">1</a>
+                    <a href="news.html">2</a>
+                    <a href="news.html">3</a>
+                    <a href="news.html">4</a>
+                    <a href="news.html">5</a>
+                    </div>
+                    </div>
+                </div>
+                <div id="about-book">
+                    <h2>Литературы о Николае II </h2>
+                    <p>Сборник представляет собой опыт историко-познавательного исследования экономических реформ, социальных преобразований, обновления государственно-политического строя России в эпоху правления Императора Николая II.
+                    </p>
+                    <p> Информационный материал подобран и систематизирован на основе изучения статистико-документальных справочников Российской Империи, академических и отраслевых энциклопедий, документальной исторической литературы, научных монографий, изданных в СССР и РФ.</p>
+                    <p>Сборник представляет интерес для всех, кто изучает Отечественную историю.</p>
+                    <p>Инициатива издания сборника принадлежит ЗАО «Таганский ряд» при поддержке Фонда святой Екатерины.</p>
+                </div>
+                <div id="news-book">
+                    <h2>Статьи о Николае II</h2>
                     <div class="news__body all">
                         <a href="news-1.html">
                             <div>
                                 <img alt="news" src="img/fphoto/news/1/index.jpg">
                             </div>
-                            <span>08 октября | 2017</span>
-                            <h3>КОНФЕРЕНЦИЯ «УРАЛ В СУДЬБЕ РОМАНОВЫХ» – В ВЕДУЩЕМ ЭКОНОМИЧЕСКОМ ВУЗЕ РЕГИОНА</h3>
-                            <p>
-                                В Уральском государственном экономическом университете прошла Межрегиональная научно-практическая конференция «Урал в судьбе Романовых», посвященная подготовке к 100-летию со дня гибели царской семьи. Военный журналист полковник запаса Владислав Майоров, автор календаря «Россия в эпоху правления Императора Николая II», выступил в ходе пленарного заседания с докладом «Нравственные основы реформ Императора Николая II».
-                            </p>
+                            <span>Автор: Петр Мультатули</span>
+                            <h3>Формирование личности и характера Императора Николая II</h3>
+                            <p>У Императора Александра III и Императрицы Марии Феодоровны было пятеро детей: Николай (6 мая 1868), Александр (7 июня 1869), Георгий (27 апреля 1870), Ксения (25 марта 1875), Михаил (22 ноября 1878) и Ольга (1 июня 1882). Их второй сын, Великий Князь Александр Александрович, прожил меньше года: он скончался от менингита 2 мая 1870 г. Это была первая смерть в жизни Николая II. Он принял известие о кончине брата спокойно и, когда его подвели к смертному одру, поцеловал усопшего в лоб и положил в кроватку розу, как ему и сказали сделать родные.</p>
                         </a>
                         <a href="news-2.html">
                             <div>
                                 <img alt="news" src="img/fphoto/news/2/index.jpg">
                             </div>
-                            <span>19 сентября | 2017</span>
-                            <h3>НРАВСТВЕННЫЕ ОСНОВЫ РЕФОРМ ИМПЕРАТОРА НИКОЛАЯ II</h3>
-                            <p>
-                                Военный журналист полковник запаса Владислав Майоров, автор календаря «Россия в эпоху правления Императора Николая II», выступил  на XIII Съезде православных законоучителей Екатеринбургской митрополии, проходившем 22-23 августа 2017 года в уральской столице. «Святая Царская семья: проповедь веры и учение нравственности» — тема православного педагогического форума в 2017 году. Работу по этой теме воскресные школы Екатеринбургской епархии продолжат на протяжении 2017-2018 учебного года. Тематические столы, секции и мастер-классы проходили более чем на десяти площадках города.
+                            <span>Автор: Петр Мультатули</span>
+                            <h3>Император Николай II: свойства личности. Часть 7</h3>
+                            <p>Рост Императора Николая II был 1 м. 70 см. (5 фут. и 7 дюймов), который в то время считался средним. Генерал Н.Н. Обручев писал, что стройная фигура Николая II «пропорциональностью своего сложения была безукоризненной, блистала исключительной элегантностью своего врожденного изящества, которое в соединении с военной выправкой, спортивным совершенством, мягкой плавностью движений Государя являла собой внешний облик Его царственного величия и царственной простоты».
                             </p>
+                                <p class="news__body__label">Часть 7</p>
                         </a>
                         <a href="news-3.html">
                             <div>
                                 <img alt="news" src="img/fphoto/news/3/index.jpg">
                             </div>
-                            <span>16 октября | 2016</span>
-                            <h3>КАЛЕНДАРЬ ОБ ИМПЕРАТОРЕ НИКОЛАЕ II – ГЛАВНАЯ ТЕМА ХХV РОЖДЕСТВЕНСКИХ ОБРАЗОВАТЕЛЬНЫХ ЧТЕНИЙ</h3>
-                            <p>
-                                Идея и содержание календаря «Россия в эпоху правления Императора Николая II (1894-2017 гг.). Реформы. Преобразования. Достижения», подготовленного и изданного под руководством ктитора прихода святого мученика Иоанна Воина и президента Свердловского регионального общественного благотворительного фонда «Таганский» Ивана Денисовича Вилкина, определили главную тему Регионального этапа ХХV Международных Рождественских образовательных чтений «1917-2017 годы: Уроки столетия».
+                            <span>Автор: Петр Мультатули</span>
+                            <h3>Император Николай II: свойства личности. Часть 6</h3>
+                            <p>Рост Императора Николая II был 1 м. 70 см. (5 фут. и 7 дюймов), который в то время считался средним. Генерал Н.Н. Обручев писал, что стройная фигура Николая II «пропорциональностью своего сложения была безукоризненной, блистала исключительной элегантностью своего врожденного изящества, которое в соединении с военной выправкой, спортивным совершенством, мягкой плавностью движений Государя являла собой внешний облик Его царственного величия и царственной простоты».
                             </p>
+                                <p class="news__body__label">Часть 6</p>
                         </a>
                         <a href="news-4.html">
                             <div>
                                 <img alt="news" src="img/fphoto/news/4/index.jpg">
                             </div>
-                            <span>29 сентября | 2015</span>
-                            <h3>КАЛЕНДАРЬ СТАЛ ЭКСПОЗИЦИЕЙ МУЗЕЯ </h3>
-                            <p>
-                                Проект календаря «Россия в эпоху правления Императора Николая II «Реформы. Преобразования. Достижения» обрел вторую жизнь. Он стал основой для создания одного из залов нового музейно-выставочного  центра, который расположился в цокольном этаже храма в честь иконы Божией Матери «Державная» в мужском монастыре святых Царственных Страстотерпцев, что на Ганиной яме под Екатеринбургом.
-                            </p>
-                        </a>
-                        <a href="news-5.html">
-                            <div>
-                                <img alt="news" src="img/fphoto/news/5/index.jpg">
-                            </div>
-                            <span>21 сентября | 2015</span>
-                            <h3>РАЗГОВОР ОБ ЭПОХЕ НА ПАТРИАРШЕМ ПОДВОРЬЕ</h3>
-                            <p>
-                                В духовно-просветительском центре «Патриаршее подворье»  Храма-Памятника на Крови во Имя Всех Святых в Земле Российской просиявших прошла презентация календаря «Россия в эпоху правления Императора Николая II. 1894-1917 годы. Реформы. Преобразования. Достижения».
-                            </p>
-                        </a>
-                        <a href="news-6.html">
-                            <div>
-                                <img alt="news" src="img/fphoto/news/6/index.jpg">
-                            </div>
-                            <span>21 сентября | 2015</span>
-                            <h3>ПЕРВАЯ ПРЕЗЕНТАЦИЯ В ЦАРСКОЙ ОБИТЕЛИ </h3>
-                            <p>
-                                Наверное, глубоко символично, что первая презентация календаря «Россия в эпоху правления императора Николая II 1894-1917. Реформы, преобразования, достижения» состоялась в Мужском монастыре святых Царственных Страстотерпцев  на Ганиной яме.
-                            </p>
+                            <span>Автор: Петр Мультатули</span>
+                            <h3>Русская история в системе ценностей Императора Николая II</h3>
+                            <p>Руководитель программы образования Цесаревича генерал Г.Г. Данилович писал ему в 1879 г.: «Прошу Николай Александрович посвящать ежедневно, во время путешествия в Данию, час времени на чтение летописца Нестора».  </p>
                         </a>
                     </div>
-                   <!-- <div class="news__pages">
+                    <div class="news__pages">
                         <button><img alt="arrows" src="img/arrow_L.svg"></button>
                         <button><img alt="arrows" src="img/arrow_R.svg"></button>
                         <div>
@@ -302,18 +398,7 @@
                             <a href="news.html">4</a>
                             <a href="news.html">5</a>
                         </div>
-                    </div>-->
-                </div>
-            </div>
-            <div class="content__footer">
-                <div id="calendar">
-                    <div class="content__header__page-bar">
-                        <div class="content__header__page-bar__frame"></div>
-                        <div class="content__header__page-bar__wrapper">
-                            <h1>Август</h1>
-                        </div>
                     </div>
-                    <img src="img/calendar-no-hd.png">
                 </div>
             </div>
         </div>

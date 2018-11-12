@@ -753,6 +753,7 @@ button,button:focus{
             left: 50%;
             transform: rotate(45deg);
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            z-index: 1;
           }
         }
         div{
@@ -818,6 +819,7 @@ button,button:focus{
           }
           &:checked ~ div{
             display: block;
+            z-index: 1;
           }
         }
       }
@@ -1377,11 +1379,11 @@ button,button:focus{
       }
       span{
         @include text-global;
-        color: $c-text-dw;
+        color: $c-text-dg;
         font-size: 14px;
         line-height: 20px;
-        padding: 1px 14px;
-        background-color: $c-text-d;
+        padding: 1px 0;
+        //background-color: $c-text-d;
       }
       p{
         @include text-global;
@@ -3711,21 +3713,181 @@ display: none;
   }
 }
 
-
-.test{
-  &-1{
-    overflow-x: hidden;
+#book{
+  width: 830px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+.books{
+  width: calc(50% - 32px);
+  margin: 30px 15px;
+  display: inline-block;
+  height: 235px;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top;
+  &__img{
+    width: 160px;
+    display: inline-block;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+    img{
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-  &-2{
-    overflow-y: hidden;
+  &__info{
+    display: inline-block;
+    padding: 25px 20px 20px 30px;
+    vertical-align: top;
+    max-width: calc(100% - 160px);
+    &__link{
+      @include text-global;
+      color: $c-text-d;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      display: inline-block;
+      white-space: normal;
+    }
+    p{
+      @include text-global;
+      color: $c-text-dg;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
-  &-3{
+}
+#about-book{
+  width: 830px;
+  margin: 20px auto 45px auto;
+  position: relative;
+  padding: 0 15px;
+  h2{
+    @include text-petrarka;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-align: center;
+    color: $c-text-d;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+  p{
+    @include text-global;
+    color: $c-text-d;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+}
+#news-book{
+  width: 830px;
+  margin: 0 auto -70px auto;
+  position: relative;
+  h2{
+    @include text-petrarka;
+    color: $c-text-d;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+  p{
+    max-height: 118px;
     overflow: hidden;
   }
-  &-4{
-    overflow-x: auto;
+  .news__pages{
+    position: relative;
+    top: -70px;
   }
-  &-5{
-    overflow: auto;
+}
+.news__body__label{
+  position: absolute;
+  height: 23px;
+  width: 93px;
+  background-color: $c-content-bg;
+  left: 0;
+  top: 20px;
+  text-align: center;
+  @include text-global;
+  color: $c-text-d!important;
+  font-size: 14px!important;
+  font-weight: bold;
+  line-height: 19px!important;
+}
+.content__header__nav-bar{
+  width: 80%;
+  label.relative{
+    position: relative;
+    white-space: nowrap;
+    div{
+      width: 500px;
+      ol{
+        white-space: normal;
+        li{
+          width: calc((100% - 120px) / 2);
+        }
+      }
+      ul{
+        white-space: normal;
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+        li{
+          @include text-global;
+          color: $c-text-dg;
+          font-size: 14px;
+          line-height: 19px;
+          padding-top: 4px;
+          padding-left: 20px;
+          display: inline-block;
+          position: relative;
+          text-align: left;
+          width: calc((100% - 120px) / 2);
+          margin-right: 15px;
+          vertical-align: top;
+          margin-bottom: 3px;
+          &:before{
+            content:"\f0da";
+            position: absolute;
+            top:0;
+            left:0;
+            font-family: FontAwesome;
+            color: $c-text-d;
+            font-size: 18px;
+            line-height: 29px;
+          }
+          a{
+            @include text-global;
+            color: $c-text-d;
+            text-align: left;
+            font-size: 15px;
+            line-height: 18px;
+            text-decoration: none;
+            margin: 0;
+            &:hover{
+              color: $c-red;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
+}
+#book-card{
+  width: 830px;
+  margin: 0 auto;
+  position: relative;
 }
