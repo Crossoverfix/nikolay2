@@ -4999,7 +4999,7 @@ button, button:focus {
   }
   /* line 4316, ../sass/style.scss */
   .book-card__header__right h2 {
-    font-size: 16px;
+    text-align: center;
   }
 
   /* line 4320, ../sass/style.scss */
@@ -5097,5 +5097,11 @@ button, button:focus {
   /* line 4378, ../sass/style.scss */
   #news-video {
     padding: 0 10px;
+  }
+
+  /* line 4381, ../sass/style.scss */
+  .book-card__header__left__img img {
+    width: 50%;
+    margin-left: 25%;
   }
 }

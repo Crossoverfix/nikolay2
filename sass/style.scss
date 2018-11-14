@@ -4314,7 +4314,7 @@ display: none;
   .book-card__header__right{
     width: 100%;
     h2{
-      font-size: 16px;
+     text-align: center;
     }
   }
   .book-card__header__right span.autor{
@@ -4377,5 +4377,9 @@ display: none;
   }
   #news-video{
     padding: 0 10px;
+  }
+  .book-card__header__left__img img{
+    width: 50%;
+    margin-left: 25%;
   }
 }
