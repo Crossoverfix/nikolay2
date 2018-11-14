@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Newspaper</title>
+    <title>Николай II</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
@@ -21,20 +21,20 @@
     <div class="pop-up__shadow"></div>
     <div id="pop-up__content"></div>
     <div id="pop-up__call-back">
-    <div class="pop-up__header">
-        <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
-        <button class="btn-close" type="button"></button>
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
     </div>
-    <form>
-        <input type="text" name="userName" placeholder="Представтесь">
-        <input type="email" name="userEmail" placeholder="E-mail">
-        <input type="text" name="userSubject" placeholder="Тема комментария">
-        <input type="text" name="userAbout" placeholder="О себе">
-        <textarea placeholder="Текст" name="userComments"></textarea>
-        <div class="recapcha"></div>
-        <button class="button" type="submit">Отправить</button>
-    </form>
-</div>
     <div id="pop-up__call-us">
         <div class="pop-up__header">
             <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
@@ -238,7 +238,7 @@
                             </ul>
                         </div>
                     </label>
-                    <label class="relative">
+                    <label class="relative active">
                         <input type="checkbox">
                         <span>Личность Николая II</span>
                         <div>
@@ -250,95 +250,202 @@
                             </ul>
                         </div>
                     </label>
-                    <a class="active" href="#"><span>Библиотека</span></a>
+                    <a href="#"><span>Библиотека</span></a>
                     <a href="#"><span>Кинозал</span></a>
                     <a href="comments.html"><span>Отзывы</span></a>
                     <a href="news.html"><span>Новости</span></a>
                 </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <h1>Фотогалерея</h1>
+                    </div>
+                </div>
             </div>
             <div class="welcome__body">
-                <div id="book-card">
-                    <div class="book-card__header">
-                      <div class="book-card__header__left">
-                          <div class="book-card__header__left__img">
-                              <img src="img/book/1022742708.png" alt="book">
-                          </div>
-                          <a href="#">
-                              <i class="fa fa-download" aria-hidden="true"></i>
-                              <span>Мультатули - Император Николай II (Москва, 2013).pdf</span>
-                          </a>
-                      </div>
-                      <div class="book-card__header__right">
-                          <h2>«Император Николай II и заговор 1917 года. Как свергали монархию в России».</h2>
-                          <span class="autor">Автор: <b>П.В. Мультатули</b></span>
-                          <span>О книге</span>
-                          <p>Это исследование посвящено одному из самых траги-ческих периодов истории России: свержению Импера-тора Николая II с престола и упразднению вековой Самодержавной русской монархии в феврале—марте 1917 г. Между тем события, произошедшие 2/15 марта 1917 г. в Пскове, до сих пор именуется «отречением» Императора Николая II от престола. Отсюда делался, да и делается до сих пор, вывод о закономерности свержения «изжившей» себя Монархии, о «слабоволии» Николая II, «сдавшего» престол и страну. Собственно говоря, эта версия возникла сразу же после событий Февральской революции. Её наиболее ёмко сформулировал свитский генерал Д.Н. Дубенский, сказавший о Государе: «Отрёкся, как будто эскадрон сдал». Однако как верно писал доктор исторических наук А.Н. Боханов: «Все разговоры, “прави-льно” или “неправильно” поступил Николай II, когда отре-кался от престола, возможны лишь в том случае, если эту тему вырвать из конкретных исторических обстоятельств времени и места».</p>
-                      </div>
+                <div id="reforms">
+                    <div class="reforms__body foto-mod">
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/11.png">
+                            </div>
+                            <span>Государь во время Первой мировой войны</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/12.png">
+                            </div>
+                            <span>Будущий император Российской империи</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/13.png">
+                            </div>
+                            <span>Цесаревич Николай II</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/14.png">
+                            </div>
+                            <span>Дипломатия</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/15.png">
+                            </div>
+                            <span>Редкие фотографии императора Николая II и царской семьи</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/16.png">
+                            </div>
+                            <span>Государь во время Первой мировой войны</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/17.png">
+                            </div>
+                            <span>Портреты</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/18.png">
+                            </div>
+                            <span>Император Николай II
+(Фотореконструкция)</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/19.png">
+                            </div>
+                            <span>Царская семья
+(Фотореконструкция)</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/20.png">
+                            </div>
+                            <span>Государь во время Первой мировой войны</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/21.png">
+                            </div>
+                            <span>Будущий император Российской империи</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/23.png">
+                            </div>
+                            <span>Цесаревич Николай II</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/24.png">
+                            </div>
+                            <span>Дипломатия</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/25.png">
+                            </div>
+                            <span>Редкие фотографии императора Николая II и царской семьи</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/26.png">
+                            </div>
+                            <span>Государь во время Первой мировой войны</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/27.png">
+                            </div>
+                            <span>Портреты</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/28.png">
+                            </div>
+                            <span>Император Николай II
+(Фотореконструкция)</span>
+                        </a>
+                        <a href="foto-more.html">
+                            <label>
+                                <p>15 фото</p>
+                            </label>
+                            <div>
+                                <img alt="reforms" src="img/book/29.png">
+                            </div>
+                            <span>Царская семья
+(Фотореконструкция)</span>
+                        </a>
                     </div>
-                    <div class="book-card__body">
-                        <div class="news-card__body__slider">
-                            <div id="slider-content-watch"></div>
-                            <div id="slider-nav-bar">
-                                <button><img src="img/arrow_L.svg"></button>
-                                <button><img src="img/arrow_R.svg"></button>
-                                <div class="content">
-
-                                </div>
-                            </div>
-                            <div id="slider-all-content">
-                                <img src="img/fphoto/news/2/1.jpg">
-                                <img src="img/fphoto/news/2/2.jpg">
-                                <img src="img/fphoto/news/2/3.jpg">
-                                <img src="img/fphoto/news/2/4.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-card__footer">
-                        <h2>Еще литературы о Николае II</h2>
-                        <div class="book-card__footer__content">
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap1.png" alt="book">
-                                </div>
-                                <h3>
-                                    Последний Император России
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap2.png" alt="book">
-                                </div>
-                                <h3>
-                                    Дневники императора
-                                    Николая II (1894-1918)
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap3.png" alt="book">
-                                </div>
-                                <h3>
-                                    Следствие по делу об убий-стве российской императорской семьи
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap5.png" alt="book">
-                                </div>
-                                <h3>
-                                    Последний царь
-                                </h3>
-                            </a>
-                            <div class="book-card__footer__content__control">
-                                <button><img src="img/arrow_L.svg"></button>
-                                <button><img src="img/arrow_R.svg"></button>
-                            </div>
+                    <div class="news__pages">
+                        <button><img alt="arrows" src="img/arrow_L.svg"></button>
+                        <button><img alt="arrows" src="img/arrow_R.svg"></button>
+                        <div>
+                            <a href="news.html">1</a>
+                            <a href="news.html">2</a>
+                            <a href="news.html">3</a>
+                            <a href="news.html">4</a>
+                            <a href="news.html">5</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="content__footer">
-
             </div>
         </div>
     </div>
@@ -385,6 +492,5 @@
     </div>
 </footer>
 <script src="js/script.js"></script>
-<script src="js/slider.js"></script>
 </body>
 </html>

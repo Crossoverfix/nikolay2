@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Newspaper</title>
+    <title>Николай II</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
@@ -21,20 +21,20 @@
     <div class="pop-up__shadow"></div>
     <div id="pop-up__content"></div>
     <div id="pop-up__call-back">
-    <div class="pop-up__header">
-        <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
-        <button class="btn-close" type="button"></button>
+        <div class="pop-up__header">
+            <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            <button class="btn-close" type="button"></button>
+        </div>
+        <form>
+            <input type="text" name="userName" placeholder="Представтесь">
+            <input type="email" name="userEmail" placeholder="E-mail">
+            <input type="text" name="userSubject" placeholder="Тема комментария">
+            <input type="text" name="userAbout" placeholder="О себе">
+            <textarea placeholder="Текст" name="userComments"></textarea>
+            <div class="recapcha"></div>
+            <button class="button" type="submit">Отправить</button>
+        </form>
     </div>
-    <form>
-        <input type="text" name="userName" placeholder="Представтесь">
-        <input type="email" name="userEmail" placeholder="E-mail">
-        <input type="text" name="userSubject" placeholder="Тема комментария">
-        <input type="text" name="userAbout" placeholder="О себе">
-        <textarea placeholder="Текст" name="userComments"></textarea>
-        <div class="recapcha"></div>
-        <button class="button" type="submit">Отправить</button>
-    </form>
-</div>
     <div id="pop-up__call-us">
         <div class="pop-up__header">
             <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
@@ -250,95 +250,112 @@
                             </ul>
                         </div>
                     </label>
-                    <a class="active" href="#"><span>Библиотека</span></a>
-                    <a href="#"><span>Кинозал</span></a>
+                    <a href="#"><span>Библиотека</span></a>
+                    <a class="active" href="#"><span>Кинозал</span></a>
                     <a href="comments.html"><span>Отзывы</span></a>
                     <a href="news.html"><span>Новости</span></a>
                 </div>
-            </div>
-            <div class="welcome__body">
-                <div id="book-card">
-                    <div class="book-card__header">
-                      <div class="book-card__header__left">
-                          <div class="book-card__header__left__img">
-                              <img src="img/book/1022742708.png" alt="book">
-                          </div>
-                          <a href="#">
-                              <i class="fa fa-download" aria-hidden="true"></i>
-                              <span>Мультатули - Император Николай II (Москва, 2013).pdf</span>
-                          </a>
-                      </div>
-                      <div class="book-card__header__right">
-                          <h2>«Император Николай II и заговор 1917 года. Как свергали монархию в России».</h2>
-                          <span class="autor">Автор: <b>П.В. Мультатули</b></span>
-                          <span>О книге</span>
-                          <p>Это исследование посвящено одному из самых траги-ческих периодов истории России: свержению Импера-тора Николая II с престола и упразднению вековой Самодержавной русской монархии в феврале—марте 1917 г. Между тем события, произошедшие 2/15 марта 1917 г. в Пскове, до сих пор именуется «отречением» Императора Николая II от престола. Отсюда делался, да и делается до сих пор, вывод о закономерности свержения «изжившей» себя Монархии, о «слабоволии» Николая II, «сдавшего» престол и страну. Собственно говоря, эта версия возникла сразу же после событий Февральской революции. Её наиболее ёмко сформулировал свитский генерал Д.Н. Дубенский, сказавший о Государе: «Отрёкся, как будто эскадрон сдал». Однако как верно писал доктор исторических наук А.Н. Боханов: «Все разговоры, “прави-льно” или “неправильно” поступил Николай II, когда отре-кался от престола, возможны лишь в том случае, если эту тему вырвать из конкретных исторических обстоятельств времени и места».</p>
-                      </div>
-                    </div>
-                    <div class="book-card__body">
-                        <div class="news-card__body__slider">
-                            <div id="slider-content-watch"></div>
-                            <div id="slider-nav-bar">
-                                <button><img src="img/arrow_L.svg"></button>
-                                <button><img src="img/arrow_R.svg"></button>
-                                <div class="content">
-
-                                </div>
-                            </div>
-                            <div id="slider-all-content">
-                                <img src="img/fphoto/news/2/1.jpg">
-                                <img src="img/fphoto/news/2/2.jpg">
-                                <img src="img/fphoto/news/2/3.jpg">
-                                <img src="img/fphoto/news/2/4.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-card__footer">
-                        <h2>Еще литературы о Николае II</h2>
-                        <div class="book-card__footer__content">
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap1.png" alt="book">
-                                </div>
-                                <h3>
-                                    Последний Император России
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap2.png" alt="book">
-                                </div>
-                                <h3>
-                                    Дневники императора
-                                    Николая II (1894-1918)
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap3.png" alt="book">
-                                </div>
-                                <h3>
-                                    Следствие по делу об убий-стве российской императорской семьи
-                                </h3>
-                            </a>
-                            <a href="book-more.html">
-                                <div class="book-card__footer__img">
-                                    <img src="img/book/Bitmap5.png" alt="book">
-                                </div>
-                                <h3>
-                                    Последний царь
-                                </h3>
-                            </a>
-                            <div class="book-card__footer__content__control">
-                                <button><img src="img/arrow_L.svg"></button>
-                                <button><img src="img/arrow_R.svg"></button>
-                            </div>
-                        </div>
+                <div class="content__header__page-bar">
+                    <div class="content__header__page-bar__frame"></div>
+                    <div class="content__header__page-bar__wrapper">
+                        <h1>Кинозал</h1>
                     </div>
                 </div>
             </div>
-            <div class="content__footer">
-
+            <div class="welcome__body">
+                <div id="video">
+                    <div class="video__frame">
+                        <iframe src="https://www.youtube.com/embed/oUwd9OOvZT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Видео о Николае II</iframe>
+                    </div>
+                    <div class="video__info">
+                        <h2>Царская семья. Последний год</h2>
+                        <div class="video__info__text">
+                            <input id="video-text-collapse" type="checkbox">
+                            <div class="video__info__text__collapse">
+                                <p>Изначально авторы фильма решили отойти от классической формы художественно-документального фильма и построили его исключительно на исторических источниках, а именно на дневниках и письмах Государя Императора Николая II и Государыни Императрицы Александры Феодоровны.</p>
+                                <p>Фильм «Царская Семья» был задуман к 100-летию со дня злодейского убийства Царской Семьи в Екатеринбурге.</p>
+                                <p>Эти документы двух любящих Венценосных Супругов, с предельной, пронзительной точностью и достоверностью раскрывают трагический последний год земной жизни Царской Семьи.</p>
+                                <p>От Псковской гефсимании до Екатеринбургской голгофы — вот хронологические рамки нашего фильма. Дневники и письма Царя и Царицы раскрывают их беззаветную любовь к Богу, России, к русскому народу.</p>
+                                <p>Государыня писала из Тобольска: «О Боже, спаси Россию! Это крик души и днем, и ночью. Чувствую себя матерью этой страны и страдаю, как за своего ребенка и люблю мою родину, несмотря на черную неблагодарность к Государю, которая разрывает мое сердце, но ведь это не вся страна. Болезнь, после которой она окрепнет. Господи смилуйся и спаси Россию! Как я счастлива, что мы не за границей, а с ней все это переживаем. Как хочется с любимым больным человеком все разделить, вместе пережить и с любовью и волнением за ним следовать, так и с Родиной».</p>
+                                <p>Император Николай II оставил нам бессмертное завещания, переданное его старшей дочерью Великой Княжной Ольгой Николаевной: «Отец просил передать всем тем, кто Ему остался предан, и тем, на кого они могут иметь влияние, чтобы они не мстили за Него, так как Он всех простил и за всех молится, и чтобы не мстили за себя, и чтобы помнили, что то зло, которое сейчас в мире, будет еще сильнее, но не что зло победит зло, а только любовь».</p>
+                                <p>Текст и сценарий фильма были написаны известным историком Петром Мультатули. Текст читают: народный артист России Дмитрий Певцов и народна артистка России Ольга Дроздова.</p>
+                            </div>
+                            <label for="video-text-collapse">
+                                <p>Читать полностью</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="news-video">
+                    <h2>Видеоархив</h2>
+                    <div class="news__body all">
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v1.png">
+                            </div>
+                            <h3>Мини-фильм «Кто такой Николай II для России?» Автор: Андрей Борисюк</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v2.png">
+                            </div>
+                            <h3>Оценка уровня развития Российской Империи в начале XX века</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <label>
+                                <p>15 видео</p>
+                            </label>
+                            <div>
+                                <img alt="news" src="img/book/v3.png">
+                            </div>
+                            <h3>"Николай Второй: правда и мифы" №10. Виноват ли Николай II в "Ленском расстреле"?</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v3.png">
+                            </div>
+                            <h3>Николая II в Киев на открытие памятника Александру II в 1911 году.</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v5.png">
+                            </div>
+                            <h3>Николай II во главе внешней политики. Лекция 3.</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v6.png">
+                            </div>
+                            <h3>"Николай Второй: правда и мифы" №10. Виноват ли Николай II в "Ленском расстреле"?</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <div>
+                                <img alt="news" src="img/book/v6.png">
+                            </div>
+                            <h3>Электрификация в Эпоху правления Николая II</h3>
+                        </a>
+                        <a href="video-more.html">
+                            <label>
+                                <p>15 видео</p>
+                            </label>
+                            <div>
+                                <img alt="news" src="img/book/v1.png">
+                            </div>
+                            <h3>Николай II во главе внешней политики. Лекция 3.</h3>
+                        </a>
+                    </div>
+                    <div class="news__pages">
+                        <button><img alt="arrows" src="img/arrow_L.svg"></button>
+                        <button><img alt="arrows" src="img/arrow_R.svg"></button>
+                        <div>
+                            <a href="news.html">1</a>
+                            <a href="news.html">2</a>
+                            <a href="news.html">3</a>
+                            <a href="news.html">4</a>
+                            <a href="news.html">5</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -385,6 +402,5 @@
     </div>
 </footer>
 <script src="js/script.js"></script>
-<script src="js/slider.js"></script>
 </body>
 </html>
