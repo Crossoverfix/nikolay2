@@ -4584,7 +4584,7 @@ button, button:focus {
 .book-card__footer__img img {
   width: 100%;
   min-height: 100%;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
 }
 /* line 3997, ../sass/style.scss */
 .book-card__footer__content {
@@ -4865,241 +4865,351 @@ button, button:focus {
   margin: 0;
 }
 
+/* line 4231, ../sass/style.scss */
+.foto__about {
+  width: 610px;
+  margin: 0 auto 30px auto;
+}
+/* line 4234, ../sass/style.scss */
+.foto__about span {
+  display: block;
+  width: 80px;
+  height: 26px;
+  background-color: #533625;
+  line-height: 26px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+}
+/* line 4247, ../sass/style.scss */
+.foto__about h3 {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #533625;
+  text-align: center;
+}
+/* line 4256, ../sass/style.scss */
+.foto__about p {
+  margin-top: 35px;
+  font-family: 'Open Sans', sans-serif;
+  color: #7C6742;
+  font-size: 14px;
+  line-height: 19px;
+}
+/* line 4264, ../sass/style.scss */
+.foto__catalog {
+  padding: 0 50px;
+}
+/* line 4266, ../sass/style.scss */
+.foto__catalog__card {
+  display: inline-block;
+  width: calc((100% - 120px) / 3);
+  margin-right: 55px;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-color: black;
+  cursor: pointer;
+}
+/* line 4277, ../sass/style.scss */
+.foto__catalog__card:before {
+  content: "\f00e";
+  font-family: FontAwesome;
+  font-size: 0px;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 4289, ../sass/style.scss */
+.foto__catalog__card:hover img {
+  opacity: 0.6;
+}
+/* line 4292, ../sass/style.scss */
+.foto__catalog__card:hover:before {
+  font-size: 28px;
+}
+/* line 4296, ../sass/style.scss */
+.foto__catalog__card:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 4299, ../sass/style.scss */
+.foto__catalog__card img {
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: -6px;
+}
+
 @media screen and (max-width: 1024px) {
-  /* line 4231, ../sass/style.scss */
+  /* line 4308, ../sass/style.scss */
+  .foto__catalog__card {
+    width: calc((100% - 50px) / 3);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* line 4313, ../sass/style.scss */
   .content__header__nav-bar {
     width: 90%;
   }
 
-  /* line 4234, ../sass/style.scss */
+  /* line 4316, ../sass/style.scss */
   #book {
     width: 100%;
   }
 
-  /* line 4237, ../sass/style.scss */
+  /* line 4319, ../sass/style.scss */
   .books {
     height: 210px;
   }
-  /* line 4239, ../sass/style.scss */
+  /* line 4321, ../sass/style.scss */
   .books__img {
     width: 140px;
   }
-  /* line 4242, ../sass/style.scss */
+  /* line 4324, ../sass/style.scss */
   .books__info {
     padding: 10px 20px 20px 15px;
   }
 
-  /* line 4246, ../sass/style.scss */
+  /* line 4328, ../sass/style.scss */
   #about-book {
     width: 100%;
   }
 
-  /* line 4249, ../sass/style.scss */
+  /* line 4331, ../sass/style.scss */
   #news-book {
     width: 100%;
   }
 
-  /* line 4252, ../sass/style.scss */
+  /* line 4334, ../sass/style.scss */
   #news-book .news__pages {
     top: -30px;
     margin: 0 auto 50px auto;
   }
 
-  /* line 4256, ../sass/style.scss */
+  /* line 4338, ../sass/style.scss */
   #book-card {
     width: 100%;
   }
 
-  /* line 4259, ../sass/style.scss */
+  /* line 4341, ../sass/style.scss */
   #video {
     width: 100%;
   }
 
-  /* line 4262, ../sass/style.scss */
+  /* line 4344, ../sass/style.scss */
   #news-video {
     width: 100%;
   }
 
-  /* line 4265, ../sass/style.scss */
+  /* line 4347, ../sass/style.scss */
   #news-video .news__pages {
     top: -20px !important;
     margin: 0 auto 60px auto;
   }
 
-  /* line 4269, ../sass/style.scss */
+  /* line 4351, ../sass/style.scss */
   .reforms__body.foto-mod a {
     width: calc((100% - 115px) / 2);
   }
 
-  /* line 4272, ../sass/style.scss */
+  /* line 4354, ../sass/style.scss */
   .reforms__body.foto-mod ~ .news__pages {
     top: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 4277, ../sass/style.scss */
+  /* line 4359, ../sass/style.scss */
+  .foto__about {
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px auto 30px auto;
+  }
+
+  /* line 4364, ../sass/style.scss */
+  .foto__catalog {
+    padding: 0 20px;
+  }
+
+  /* line 4367, ../sass/style.scss */
+  .foto__catalog__card {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  /* line 4371, ../sass/style.scss */
   .books {
     width: 100%;
     margin: 25px -5px;
     height: 180px;
   }
 
-  /* line 4282, ../sass/style.scss */
+  /* line 4376, ../sass/style.scss */
   .books__img {
     width: 110px;
   }
 
-  /* line 4285, ../sass/style.scss */
+  /* line 4379, ../sass/style.scss */
   .books__info p {
     white-space: normal;
   }
 
-  /* line 4288, ../sass/style.scss */
+  /* line 4382, ../sass/style.scss */
   .books__info {
     max-width: calc(100% - 120px);
     padding: 10px 0 20px 10px;
   }
-  /* line 4291, ../sass/style.scss */
+  /* line 4385, ../sass/style.scss */
   .books__info__link {
     max-width: 100%;
     font-size: 16px;
     line-height: 19px;
   }
 
-  /* line 4297, ../sass/style.scss */
+  /* line 4391, ../sass/style.scss */
   #news-book .news__body.all {
     padding: 30px 10px 0 10px;
   }
 
-  /* line 4300, ../sass/style.scss */
+  /* line 4394, ../sass/style.scss */
   #about-book h2 {
     margin-bottom: 25px;
   }
 
-  /* line 4303, ../sass/style.scss */
+  /* line 4397, ../sass/style.scss */
   #news-book .news__pages {
     width: 90%;
   }
 
-  /* line 4306, ../sass/style.scss */
+  /* line 4400, ../sass/style.scss */
   .book-card__header__left {
     width: 100%;
     margin-right: 0;
     margin-bottom: 15px;
   }
 
-  /* line 4311, ../sass/style.scss */
+  /* line 4405, ../sass/style.scss */
   .book-card__header {
     padding: 20px 10px;
   }
 
-  /* line 4314, ../sass/style.scss */
+  /* line 4408, ../sass/style.scss */
   .book-card__header__right {
     width: 100%;
   }
-  /* line 4316, ../sass/style.scss */
+  /* line 4410, ../sass/style.scss */
   .book-card__header__right h2 {
     text-align: center;
   }
 
-  /* line 4320, ../sass/style.scss */
+  /* line 4414, ../sass/style.scss */
   .book-card__header__right span.autor {
     margin-bottom: 10px;
   }
 
-  /* line 4323, ../sass/style.scss */
+  /* line 4417, ../sass/style.scss */
   .book-card__header__right span {
     margin-bottom: 10px;
   }
 
-  /* line 4326, ../sass/style.scss */
+  /* line 4420, ../sass/style.scss */
   .book-card__header__right p {
     font-size: 12px;
   }
 
-  /* line 4329, ../sass/style.scss */
+  /* line 4423, ../sass/style.scss */
   .book-card__footer__content a {
-    width: calc(100% / 2 - 8px);
+    width: calc(100% / 2 - 10px);
     margin: 0 3px;
     display: none;
   }
-  /* line 4333, ../sass/style.scss */
+  /* line 4427, ../sass/style.scss */
   .book-card__footer__content a:nth-child(1) {
     display: inline-block;
   }
-  /* line 4336, ../sass/style.scss */
+  /* line 4430, ../sass/style.scss */
   .book-card__footer__content a:nth-child(2) {
     display: inline-block;
   }
 
-  /* line 4340, ../sass/style.scss */
+  /* line 4434, ../sass/style.scss */
   .book-card__footer__img {
     margin-bottom: 5px;
   }
 
-  /* line 4343, ../sass/style.scss */
+  /* line 4437, ../sass/style.scss */
   .book-card__footer__content {
     padding: 0 25px;
   }
 
-  /* line 4346, ../sass/style.scss */
+  /* line 4440, ../sass/style.scss */
   .book-card__footer__content__control button {
     width: 25px;
   }
 
-  /* line 4349, ../sass/style.scss */
+  /* line 4443, ../sass/style.scss */
   .book-card__footer__content {
     margin-bottom: 20px;
   }
 
-  /* line 4352, ../sass/style.scss */
+  /* line 4446, ../sass/style.scss */
   #news-video .news__pages {
     width: 80%;
   }
 
-  /* line 4355, ../sass/style.scss */
+  /* line 4449, ../sass/style.scss */
   .video__frame {
     margin: 40px auto 25px auto;
   }
 
-  /* line 4358, ../sass/style.scss */
+  /* line 4452, ../sass/style.scss */
   .video__info {
     margin-bottom: 40px;
   }
 
-  /* line 4361, ../sass/style.scss */
+  /* line 4455, ../sass/style.scss */
   #video h1 {
     margin-top: 20px;
   }
 
-  /* line 4364, ../sass/style.scss */
+  /* line 4458, ../sass/style.scss */
   .book-card__footer {
     margin-top: 40px;
   }
 
-  /* line 4367, ../sass/style.scss */
+  /* line 4461, ../sass/style.scss */
   .book-card__footer__content.video-mod a {
-    width: calc(100% / 2 - 8px);
+    width: calc(100% / 2 - 10px);
   }
 
-  /* line 4370, ../sass/style.scss */
+  /* line 4464, ../sass/style.scss */
   .reforms__body.foto-mod a {
     margin: 0 0px 25px 0px;
     width: 100%;
   }
 
-  /* line 4374, ../sass/style.scss */
+  /* line 4468, ../sass/style.scss */
   .reforms__body.foto-mod ~ .news__pages {
     top: -10px;
     width: 90%;
   }
 
-  /* line 4378, ../sass/style.scss */
+  /* line 4472, ../sass/style.scss */
   #news-video {
     padding: 0 10px;
   }
 
-  /* line 4381, ../sass/style.scss */
+  /* line 4475, ../sass/style.scss */
   .book-card__header__left__img img {
     width: 50%;
     margin-left: 25%;

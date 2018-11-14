@@ -3991,7 +3991,7 @@ display: none;
       img{
         width: 100%;
         min-height: 100%;
-        margin-bottom: -4px;
+        margin-bottom: -5px;
       }
     }
     &__content{
@@ -4227,7 +4227,89 @@ display: none;
     }
   }
 }
+.foto{
+  &__about{
+    width: 610px;
+    margin: 0 auto 30px auto;
+    span{
+      display: block;
+      width: 80px;
+      height: 26px;
+      background-color: $c-text-d;
+      line-height: 26px;
+      font-size: 14px;
+      @include text-global;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      margin: 20px auto;
+    }
+    h3{
+      display: block;
+      @include text-global;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: $c-text-d;
+      text-align: center;
+    }
+    p{
+      margin-top: 35px;
+      @include text-global;
+      color: $c-text-dg;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  &__catalog{
+    padding: 0 50px;
+    &__card{
+      display: inline-block;
+      width: calc((100% - 120px) / 3);
+      margin-right: 55px;
+      position: relative;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      overflow: hidden;
+      margin-bottom: 40px;
+      background-color: black;
+      cursor: pointer;
+      &:before{
+        content: "\f00e";
+        font-family: FontAwesome;
+        font-size: 0px;
+        color: white;
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      &:hover{
+        img{
+          opacity: 0.6;
+        }
+        &:before{
+          font-size: 28px;
+        }
+      }
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+      img{
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: -6px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px){
+  .foto__catalog__card{
+    width: calc((100% - 50px) / 3);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
   .content__header__nav-bar {
     width: 90%;
   }
@@ -4274,6 +4356,18 @@ display: none;
   }
 }
 @media screen and (max-width: 767px){
+  .foto__about{
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px auto 30px auto;
+  }
+  .foto__catalog{
+    padding: 0 20px;
+  }
+  .foto__catalog__card {
+    width: 100%;
+    margin-right: 0px;
+  }
   .books{
     width: 100%;
     margin: 25px -5px;
@@ -4327,7 +4421,7 @@ display: none;
     font-size: 12px;
   }
   .book-card__footer__content a{
-    width: calc(100% / 2 - 8px);
+    width: calc(100% / 2 - 10px);
     margin: 0 3px;
     display: none;
     &:nth-child(1){
@@ -4365,7 +4459,7 @@ display: none;
     margin-top: 40px;
   }
   .book-card__footer__content.video-mod a{
-    width: calc(100% / 2 - 8px);
+    width: calc(100% / 2 - 10px);
   }
   .reforms__body.foto-mod a{
     margin: 0 0px 25px 0px;

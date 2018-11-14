@@ -10,6 +10,27 @@ $(document).ready(function () {
     var $mobilColapseBtn = $("#collapse__button");
     var $mobilNavMenu = $("#mobil-menu");
     var $mobilCloseBtn = $mobilNavMenu.find(".mobil-menu__close");
+    var $fotoCard = $(".foto__catalog__card");
+    $fotoCard.on('click',function () {
+        let $temp = $(this).find("img").clone();
+        $("#pop-up").css('display','block');
+        $("#pop-up__content").css({'display':'block','height':'100%'});
+        $('#pop-up__content').on('click',function () {
+            $("#pop-up").css('display','none');
+            $("#pop-up__content").css('display','none');
+            $('.pop-up__shadow').off();
+            $('#pop-up__content').off();
+            $('#pop-up__content').empty();
+        });
+        $(document).keydown(function (e) {
+            if (e.which == "27"){
+                $("#pop-up").css('display','none');
+                $("#pop-up__content").css('display','none');
+            };
+        });
+        $temp.appendTo('#pop-up__content');
+        $temp.css({'position':'absolute','top':'50%','left':'50%','transform':'translate(-50%,-50%)','z-index':'120','max-width':'90%','max-height':'90%','-moz-user-select':'none','-khtml-user-select':'none','user-select':'none'});
+    })
     $mobilCloseBtn.click(function () {
         $mobilNavMenu.css({display:'none'});
     })
