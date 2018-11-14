@@ -3987,8 +3987,11 @@ display: none;
       width: 100%;
       overflow: hidden;
       margin-bottom: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
       img{
         width: 100%;
+        min-height: 100%;
+        margin-bottom: -4px;
       }
     }
     &__content{
@@ -4041,8 +4044,6 @@ display: none;
   margin: 0 auto;
   position: relative;
   h1{
-    position: absolute;
-    top: -50px;
     @include text-global;
     font-size: 18px;
     line-height: 24px;
@@ -4257,9 +4258,6 @@ display: none;
   }
   #video{
     width: 100%;
-    h1{
-      top: -70px;
-    }
   }
   #news-video{
     width: 100%;
@@ -4278,22 +4276,43 @@ display: none;
 @media screen and (max-width: 767px){
   .books{
     width: 100%;
+    margin: 25px -5px;
+    height: 180px;
+  }
+  .books__img{
+    width: 110px;
+  }
+  .books__info p{
+    white-space: normal;
+  }
+  .books__info{
+    max-width: calc(100% - 120px);
+    padding: 10px 0 20px 10px;
+    &__link{
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  #news-book .news__body.all{
+    padding: 30px 10px 0 10px;
   }
   #about-book h2{
     margin-bottom: 25px;
   }
   #news-book .news__pages{
-    width: 80%;
+    width: 90%;
   }
   .book-card__header__left{
-    width: 40%;
-    margin-right: 20px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
   .book-card__header{
-    padding: 20px;
+    padding: 20px 10px;
   }
   .book-card__header__right{
-    width: calc(60% - 30px);
+    width: 100%;
     h2{
       font-size: 16px;
     }
@@ -4308,7 +4327,8 @@ display: none;
     font-size: 12px;
   }
   .book-card__footer__content a{
-    width: calc(100% / 2 - 34px);
+    width: calc(100% / 2 - 8px);
+    margin: 0 3px;
     display: none;
     &:nth-child(1){
       display: inline-block;
@@ -4317,6 +4337,15 @@ display: none;
       display: inline-block;
     }
   }
+  .book-card__footer__img{
+    margin-bottom: 5px;
+  }
+  .book-card__footer__content{
+    padding: 0 25px;
+  }
+  .book-card__footer__content__control button{
+    width: 25px;
+  }
   .book-card__footer__content{
     margin-bottom: 20px;
   }
@@ -4324,16 +4353,19 @@ display: none;
     width: 80%;
   }
   .video__frame{
-    margin: 100px auto 25px auto;
+    margin: 40px auto 25px auto;
   }
   .video__info{
     margin-bottom: 40px;
+  }
+  #video h1{
+    margin-top: 20px;
   }
   .book-card__footer{
     margin-top: 40px;
   }
   .book-card__footer__content.video-mod a{
-    width: calc(100% / 2 - 34px);
+    width: calc(100% / 2 - 8px);
   }
   .reforms__body.foto-mod a{
     margin: 0 0px 25px 0px;
@@ -4343,5 +4375,7 @@ display: none;
     top: -10px;
     width: 90%;
   }
+  #news-video{
+    padding: 0 10px;
+  }
 }
-@media screen and (min-width: 768px) and (min-height: 580px) and (max-height: 800px){}

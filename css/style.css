@@ -4578,17 +4578,20 @@ button, button:focus {
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 3990, ../sass/style.scss */
+/* line 3991, ../sass/style.scss */
 .book-card__footer__img img {
   width: 100%;
+  min-height: 100%;
+  margin-bottom: -4px;
 }
-/* line 3994, ../sass/style.scss */
+/* line 3997, ../sass/style.scss */
 .book-card__footer__content {
   position: relative;
   padding: 0 35px;
 }
-/* line 3997, ../sass/style.scss */
+/* line 4000, ../sass/style.scss */
 .book-card__footer__content a {
   vertical-align: top;
   display: inline-block;
@@ -4597,7 +4600,7 @@ button, button:focus {
   margin: 0 15px;
   position: relative;
 }
-/* line 4004, ../sass/style.scss */
+/* line 4007, ../sass/style.scss */
 .book-card__footer__content a h3 {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -4605,7 +4608,7 @@ button, button:focus {
   color: #7C6742;
   font-weight: 400;
 }
-/* line 4012, ../sass/style.scss */
+/* line 4015, ../sass/style.scss */
 .book-card__footer__content__control {
   position: absolute;
   width: 100%;
@@ -4613,7 +4616,7 @@ button, button:focus {
   left: 0;
   height: 100%;
 }
-/* line 4018, ../sass/style.scss */
+/* line 4021, ../sass/style.scss */
 .book-card__footer__content__control button {
   position: absolute;
   background-color: transparent;
@@ -4622,29 +4625,27 @@ button, button:focus {
   z-index: 1;
   top: 100px;
 }
-/* line 4025, ../sass/style.scss */
+/* line 4028, ../sass/style.scss */
 .book-card__footer__content__control button:first-of-type {
   left: 0;
 }
-/* line 4028, ../sass/style.scss */
+/* line 4031, ../sass/style.scss */
 .book-card__footer__content__control button:last-of-type {
   right: 0;
 }
-/* line 4031, ../sass/style.scss */
+/* line 4034, ../sass/style.scss */
 .book-card__footer__content__control button img {
   width: 100%;
 }
 
-/* line 4039, ../sass/style.scss */
+/* line 4042, ../sass/style.scss */
 #video {
   width: 830px;
   margin: 0 auto;
   position: relative;
 }
-/* line 4043, ../sass/style.scss */
+/* line 4046, ../sass/style.scss */
 #video h1 {
-  position: absolute;
-  top: -50px;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -4655,24 +4656,24 @@ button, button:focus {
   width: 100%;
 }
 
-/* line 4057, ../sass/style.scss */
+/* line 4058, ../sass/style.scss */
 .video__frame {
   width: calc(100% - 30px);
   margin: 50px auto 25px auto;
   height: 440px;
   box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
 }
-/* line 4062, ../sass/style.scss */
+/* line 4063, ../sass/style.scss */
 .video__frame iframe {
   width: 100%;
   height: 440px;
 }
-/* line 4067, ../sass/style.scss */
+/* line 4068, ../sass/style.scss */
 .video__info {
   padding: 0 15px;
   margin-bottom: 70px;
 }
-/* line 4070, ../sass/style.scss */
+/* line 4071, ../sass/style.scss */
 .video__info h2 {
   font-family: 'Open Sans', sans-serif;
   color: #533625;
@@ -4681,13 +4682,13 @@ button, button:focus {
   font-weight: 400;
   margin-bottom: 30px;
 }
-/* line 4079, ../sass/style.scss */
+/* line 4080, ../sass/style.scss */
 .video__info__text__collapse {
   max-height: 40px;
   overflow: hidden;
   margin-bottom: 15px;
 }
-/* line 4083, ../sass/style.scss */
+/* line 4084, ../sass/style.scss */
 .video__info__text__collapse p {
   font-family: 'Open Sans', sans-serif;
   color: #7C6742;
@@ -4695,26 +4696,26 @@ button, button:focus {
   line-height: 19px;
   margin-bottom: 15px;
 }
-/* line 4091, ../sass/style.scss */
+/* line 4092, ../sass/style.scss */
 .video__info__text input {
   display: none;
 }
-/* line 4093, ../sass/style.scss */
+/* line 4094, ../sass/style.scss */
 .video__info__text input:checked ~ .video__info__text__collapse {
   max-height: unset;
 }
-/* line 4096, ../sass/style.scss */
+/* line 4097, ../sass/style.scss */
 .video__info__text input:checked ~ label {
   display: none;
 }
-/* line 4100, ../sass/style.scss */
+/* line 4101, ../sass/style.scss */
 .video__info__text label {
   cursor: pointer;
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
 }
-/* line 4105, ../sass/style.scss */
+/* line 4106, ../sass/style.scss */
 .video__info__text label p {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -4726,17 +4727,17 @@ button, button:focus {
   text-decoration: underline;
 }
 
-/* line 4119, ../sass/style.scss */
+/* line 4120, ../sass/style.scss */
 #news-video {
   width: 830px;
   margin: 0 auto -70px auto;
   position: relative;
 }
-/* line 4123, ../sass/style.scss */
+/* line 4124, ../sass/style.scss */
 #news-video .news__pages {
   top: -50px !important;
 }
-/* line 4126, ../sass/style.scss */
+/* line 4127, ../sass/style.scss */
 #news-video h2 {
   font-family: 'petrarka';
   font-weight: normal;
@@ -4749,29 +4750,29 @@ button, button:focus {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-/* line 4136, ../sass/style.scss */
+/* line 4137, ../sass/style.scss */
 #news-video p {
   max-height: 118px;
   overflow: hidden;
 }
-/* line 4140, ../sass/style.scss */
+/* line 4141, ../sass/style.scss */
 #news-video .news__pages {
   position: relative;
   top: -70px;
 }
-/* line 4144, ../sass/style.scss */
+/* line 4145, ../sass/style.scss */
 #news-video .news__body.all a:after {
   height: 0;
 }
-/* line 4147, ../sass/style.scss */
+/* line 4148, ../sass/style.scss */
 #news-video .news__body.all a {
   margin-bottom: 40px;
 }
-/* line 4150, ../sass/style.scss */
+/* line 4151, ../sass/style.scss */
 #news-video .news__body.all a div {
   border-radius: 0px 0px 3px 3px;
 }
-/* line 4153, ../sass/style.scss */
+/* line 4154, ../sass/style.scss */
 #news-video .news__body.all a label {
   position: absolute;
   top: -23px;
@@ -4780,7 +4781,7 @@ button, button:focus {
   width: 90px;
   background-color: #533625;
 }
-/* line 4160, ../sass/style.scss */
+/* line 4161, ../sass/style.scss */
 #news-video .news__body.all a label p {
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -4790,33 +4791,33 @@ button, button:focus {
   text-align: center;
 }
 
-/* line 4170, ../sass/style.scss */
+/* line 4171, ../sass/style.scss */
 .book-card__footer__content.video-mod {
   margin-bottom: 20px;
 }
-/* line 4172, ../sass/style.scss */
+/* line 4173, ../sass/style.scss */
 .book-card__footer__content.video-mod a {
   width: calc(100% / 3 - 34px);
 }
-/* line 4175, ../sass/style.scss */
+/* line 4176, ../sass/style.scss */
 .book-card__footer__content.video-mod .book-card__footer__content__control button {
   top: 60px;
 }
 
-/* line 4179, ../sass/style.scss */
+/* line 4180, ../sass/style.scss */
 .reforms__body.foto-mod {
   padding-top: 20px;
   background-size: 0;
 }
-/* line 4182, ../sass/style.scss */
+/* line 4183, ../sass/style.scss */
 .reforms__body.foto-mod a {
   margin: 0 27px 25px 27px;
 }
-/* line 4184, ../sass/style.scss */
+/* line 4185, ../sass/style.scss */
 .reforms__body.foto-mod a:before {
   height: 0;
 }
-/* line 4187, ../sass/style.scss */
+/* line 4188, ../sass/style.scss */
 .reforms__body.foto-mod a label {
   position: absolute;
   top: 12px;
@@ -4825,7 +4826,7 @@ button, button:focus {
   width: 90px;
   background-color: #533625;
 }
-/* line 4194, ../sass/style.scss */
+/* line 4195, ../sass/style.scss */
 .reforms__body.foto-mod a label p {
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -4834,29 +4835,29 @@ button, button:focus {
   line-height: 23px;
   text-align: center;
 }
-/* line 4203, ../sass/style.scss */
+/* line 4204, ../sass/style.scss */
 .reforms__body.foto-mod a div {
   border-radius: 0px 0px 3px 3px;
 }
-/* line 4205, ../sass/style.scss */
+/* line 4206, ../sass/style.scss */
 .reforms__body.foto-mod a div img {
   min-height: 100%;
 }
 
-/* line 4212, ../sass/style.scss */
+/* line 4213, ../sass/style.scss */
 .mobil-menu__body__primary-wrapper label.relative input {
   display: none;
 }
-/* line 4214, ../sass/style.scss */
+/* line 4215, ../sass/style.scss */
 .mobil-menu__body__primary-wrapper label.relative input:checked ~ div {
   height: auto;
 }
-/* line 4218, ../sass/style.scss */
+/* line 4219, ../sass/style.scss */
 .mobil-menu__body__primary-wrapper label.relative div {
   height: 0;
   overflow: hidden;
 }
-/* line 4221, ../sass/style.scss */
+/* line 4222, ../sass/style.scss */
 .mobil-menu__body__primary-wrapper label.relative div ul {
   white-space: normal;
   padding: 10px 0 5px 20px;
@@ -4865,184 +4866,236 @@ button, button:focus {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 4230, ../sass/style.scss */
+  /* line 4231, ../sass/style.scss */
   .content__header__nav-bar {
     width: 90%;
   }
 
-  /* line 4233, ../sass/style.scss */
+  /* line 4234, ../sass/style.scss */
   #book {
     width: 100%;
   }
 
-  /* line 4236, ../sass/style.scss */
+  /* line 4237, ../sass/style.scss */
   .books {
     height: 210px;
   }
-  /* line 4238, ../sass/style.scss */
+  /* line 4239, ../sass/style.scss */
   .books__img {
     width: 140px;
   }
-  /* line 4241, ../sass/style.scss */
+  /* line 4242, ../sass/style.scss */
   .books__info {
     padding: 10px 20px 20px 15px;
   }
 
-  /* line 4245, ../sass/style.scss */
+  /* line 4246, ../sass/style.scss */
   #about-book {
     width: 100%;
   }
 
-  /* line 4248, ../sass/style.scss */
+  /* line 4249, ../sass/style.scss */
   #news-book {
     width: 100%;
   }
 
-  /* line 4251, ../sass/style.scss */
+  /* line 4252, ../sass/style.scss */
   #news-book .news__pages {
     top: -30px;
     margin: 0 auto 50px auto;
   }
 
-  /* line 4255, ../sass/style.scss */
+  /* line 4256, ../sass/style.scss */
   #book-card {
     width: 100%;
   }
 
-  /* line 4258, ../sass/style.scss */
+  /* line 4259, ../sass/style.scss */
   #video {
     width: 100%;
   }
-  /* line 4260, ../sass/style.scss */
-  #video h1 {
-    top: -70px;
-  }
 
-  /* line 4264, ../sass/style.scss */
+  /* line 4262, ../sass/style.scss */
   #news-video {
     width: 100%;
   }
 
-  /* line 4267, ../sass/style.scss */
+  /* line 4265, ../sass/style.scss */
   #news-video .news__pages {
     top: -20px !important;
     margin: 0 auto 60px auto;
   }
 
-  /* line 4271, ../sass/style.scss */
+  /* line 4269, ../sass/style.scss */
   .reforms__body.foto-mod a {
     width: calc((100% - 115px) / 2);
   }
 
-  /* line 4274, ../sass/style.scss */
+  /* line 4272, ../sass/style.scss */
   .reforms__body.foto-mod ~ .news__pages {
     top: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 4279, ../sass/style.scss */
+  /* line 4277, ../sass/style.scss */
   .books {
     width: 100%;
+    margin: 25px -5px;
+    height: 180px;
   }
 
   /* line 4282, ../sass/style.scss */
+  .books__img {
+    width: 110px;
+  }
+
+  /* line 4285, ../sass/style.scss */
+  .books__info p {
+    white-space: normal;
+  }
+
+  /* line 4288, ../sass/style.scss */
+  .books__info {
+    max-width: calc(100% - 120px);
+    padding: 10px 0 20px 10px;
+  }
+  /* line 4291, ../sass/style.scss */
+  .books__info__link {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  /* line 4297, ../sass/style.scss */
+  #news-book .news__body.all {
+    padding: 30px 10px 0 10px;
+  }
+
+  /* line 4300, ../sass/style.scss */
   #about-book h2 {
     margin-bottom: 25px;
   }
 
-  /* line 4285, ../sass/style.scss */
+  /* line 4303, ../sass/style.scss */
   #news-book .news__pages {
-    width: 80%;
+    width: 90%;
   }
 
-  /* line 4288, ../sass/style.scss */
+  /* line 4306, ../sass/style.scss */
   .book-card__header__left {
-    width: 40%;
-    margin-right: 20px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 
-  /* line 4292, ../sass/style.scss */
+  /* line 4311, ../sass/style.scss */
   .book-card__header {
-    padding: 20px;
+    padding: 20px 10px;
   }
 
-  /* line 4295, ../sass/style.scss */
+  /* line 4314, ../sass/style.scss */
   .book-card__header__right {
-    width: calc(60% - 30px);
+    width: 100%;
   }
-  /* line 4297, ../sass/style.scss */
+  /* line 4316, ../sass/style.scss */
   .book-card__header__right h2 {
     font-size: 16px;
   }
 
-  /* line 4301, ../sass/style.scss */
+  /* line 4320, ../sass/style.scss */
   .book-card__header__right span.autor {
     margin-bottom: 10px;
   }
 
-  /* line 4304, ../sass/style.scss */
+  /* line 4323, ../sass/style.scss */
   .book-card__header__right span {
     margin-bottom: 10px;
   }
 
-  /* line 4307, ../sass/style.scss */
+  /* line 4326, ../sass/style.scss */
   .book-card__header__right p {
     font-size: 12px;
   }
 
-  /* line 4310, ../sass/style.scss */
+  /* line 4329, ../sass/style.scss */
   .book-card__footer__content a {
-    width: calc(100% / 2 - 34px);
+    width: calc(100% / 2 - 8px);
+    margin: 0 3px;
     display: none;
   }
-  /* line 4313, ../sass/style.scss */
+  /* line 4333, ../sass/style.scss */
   .book-card__footer__content a:nth-child(1) {
     display: inline-block;
   }
-  /* line 4316, ../sass/style.scss */
+  /* line 4336, ../sass/style.scss */
   .book-card__footer__content a:nth-child(2) {
     display: inline-block;
   }
 
-  /* line 4320, ../sass/style.scss */
+  /* line 4340, ../sass/style.scss */
+  .book-card__footer__img {
+    margin-bottom: 5px;
+  }
+
+  /* line 4343, ../sass/style.scss */
+  .book-card__footer__content {
+    padding: 0 25px;
+  }
+
+  /* line 4346, ../sass/style.scss */
+  .book-card__footer__content__control button {
+    width: 25px;
+  }
+
+  /* line 4349, ../sass/style.scss */
   .book-card__footer__content {
     margin-bottom: 20px;
   }
 
-  /* line 4323, ../sass/style.scss */
+  /* line 4352, ../sass/style.scss */
   #news-video .news__pages {
     width: 80%;
   }
 
-  /* line 4326, ../sass/style.scss */
+  /* line 4355, ../sass/style.scss */
   .video__frame {
-    margin: 100px auto 25px auto;
+    margin: 40px auto 25px auto;
   }
 
-  /* line 4329, ../sass/style.scss */
+  /* line 4358, ../sass/style.scss */
   .video__info {
     margin-bottom: 40px;
   }
 
-  /* line 4332, ../sass/style.scss */
+  /* line 4361, ../sass/style.scss */
+  #video h1 {
+    margin-top: 20px;
+  }
+
+  /* line 4364, ../sass/style.scss */
   .book-card__footer {
     margin-top: 40px;
   }
 
-  /* line 4335, ../sass/style.scss */
+  /* line 4367, ../sass/style.scss */
   .book-card__footer__content.video-mod a {
-    width: calc(100% / 2 - 34px);
+    width: calc(100% / 2 - 8px);
   }
 
-  /* line 4338, ../sass/style.scss */
+  /* line 4370, ../sass/style.scss */
   .reforms__body.foto-mod a {
     margin: 0 0px 25px 0px;
     width: 100%;
   }
 
-  /* line 4342, ../sass/style.scss */
+  /* line 4374, ../sass/style.scss */
   .reforms__body.foto-mod ~ .news__pages {
     top: -10px;
     width: 90%;
+  }
+
+  /* line 4378, ../sass/style.scss */
+  #news-video {
+    padding: 0 10px;
   }
 }
