@@ -11,6 +11,26 @@ $(document).ready(function () {
     var $mobilNavMenu = $("#mobil-menu");
     var $mobilCloseBtn = $mobilNavMenu.find(".mobil-menu__close");
     var $fotoCard = $(".foto__catalog__card");
+    var $inputNavBar = $('.content__header__nav-bar input');
+    $inputNavBar.on('change',function () {
+       let $tempInput = $(this);
+       let $inputNumb = 0;
+       for(i = 0;i < $inputNavBar.length;i++){
+           if($inputNavBar.eq(i).prop('checked')){
+               $inputNumb += 1;
+           }
+       }
+       if($inputNumb > 1){
+           $inputNavBar.prop('checked',false);
+           $tempInput.prop('checked',true);
+       }
+        $(document).mouseup(function (e){
+            if (!$tempInput.is(e.target)
+                && $tempInput.has(e.target).length === 0) {
+                $inputNavBar.prop('checked',false);
+            }
+        });
+    })
     $fotoCard.on('click',function () {
         let $temp = $(this).find("img").clone();
         $("#pop-up").css('display','block');
@@ -30,10 +50,10 @@ $(document).ready(function () {
         });
         $temp.appendTo('#pop-up__content');
         $temp.css({'position':'absolute','top':'50%','left':'50%','transform':'translate(-50%,-50%)','z-index':'120','max-width':'90%','max-height':'90%','-moz-user-select':'none','-khtml-user-select':'none','user-select':'none'});
-    })
+    });
     $mobilCloseBtn.click(function () {
         $mobilNavMenu.css({display:'none'});
-    })
+    });
     $mobilColapseBtn.click(function () {
        $mobilNavMenu.css({display:'block'});
     });
@@ -47,13 +67,13 @@ $(document).ready(function () {
     // }
     $collapseBtn.click(function () {
         collapseMenu();
-    })
+    });
     $answersBtn.click(function () {
         answersPopUp();
     });
     $callBackBtn.click(function () {
         callBackPopUp();
-    })
+    });
     function collapseMenu() {
         $collapseCard.unbind();
         $collapseCardBtn.unbind();
@@ -165,3 +185,12 @@ function calendarPopUp($number) {
         $popUpCalendar.css('display','none');
     }
 }
+$(document).ready(function () {
+    var $pageBg = $("#newspaper .row");
+    var $colorOption = $("#color-switch input");
+    const colors = ["#F4E4C0","#F9DBBA","#E4D4BC","#E6D1B3","#F8D4A2","#D8C2A6","#D2C598"];
+    $colorOption.on('click',function () {
+        let $num = $colorOption.index($(this));
+        $pageBg.css('background-color',colors[$num]);
+    })
+})
